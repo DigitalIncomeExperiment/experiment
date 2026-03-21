@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Finance DCA — What I Did, What My Lenders Confirmed | The Digital Income Experiment</title>
+<meta name="description" content="I wrote to three car finance lenders in July 2024. All three confirmed DCAs were attached. Here is my honest account — including what having a DCA confirmed actually means for your chances of redress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64;--red:#e05252}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1}
+  em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
+  a{color:var(--amber);text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+  .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+  .nav-links a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);transition:color .2s,background .2s;text-decoration:none}
+  .nav-links a:hover{color:var(--amber);background:var(--amber-glow);opacity:1}
+  .nav-links .nav-cta{color:var(--bg);background:var(--amber);font-weight:500;padding:6px 16px}
+  .nav-links .nav-cta:hover{background:#ffc02a;color:var(--bg)}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-muted);border-radius:2px}
+  @media(max-width:900px){nav{padding:0 24px}.nav-links{display:none}.nav-hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;gap:4px}}
+
+  .post-hero{position:relative;padding:120px 80px 72px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:600px;height:600px;background:var(--purple-dim);top:-150px;right:-100px;opacity:.35}
+  .orb-2{width:400px;height:400px;background:#001a2a;bottom:-80px;left:0;opacity:.4}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.25;pointer-events:none}
+  .post-hero-inner{max-width:760px;margin:0 auto;position:relative;animation:fadeUp .8s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .post-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+  .exp-badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--amber-glow);color:var(--amber);border:1px solid var(--amber-dim);padding:4px 12px;border-radius:100px}
+  .exp-badge.pending{background:var(--purple-glow);color:var(--purple-lt);border-color:var(--purple-dim)}
+  .post-date{font-size:12px;color:var(--text-dim);letter-spacing:.06em}
+  .post-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,52px);letter-spacing:-.03em;line-height:1.05;margin-bottom:20px;color:var(--text)}
+  .post-sub{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.1rem;color:var(--text-muted);max-width:620px;line-height:1.7;margin-bottom:24px}
+  .post-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--text-dim)}
+  .post-meta strong{color:var(--text-muted)}
+
+  .stat-strip{background:var(--amber);display:grid;grid-template-columns:repeat(3,1fr)}
+  .strip-item{padding:20px 24px;text-align:center;border-right:1px solid rgba(13,11,18,.15)}
+  .strip-item:last-child{border-right:none}
+  .strip-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:var(--bg);display:block;line-height:1}
+  .strip-label{font-size:.65rem;font-weight:600;color:rgba(13,11,18,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;display:block}
+
+  .post-layout{max-width:1060px;margin:0 auto;padding:60px 80px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start}
+  @media(max-width:900px){.post-layout{grid-template-columns:1fr;padding:48px 24px}.sidebar{order:-1}}
+  @media(max-width:640px){.post-hero{padding:100px 24px 60px}}
+
+  .article p{font-size:.95rem;margin-bottom:20px;color:var(--text-muted);line-height:1.85}
+  .article p a{color:var(--amber)}
+  .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--text);margin:52px 0 16px;letter-spacing:-.01em;border-bottom:1px solid var(--border);padding-bottom:12px}
+  .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:.78rem;color:var(--purple-lt);margin:28px 0 10px;text-transform:uppercase;letter-spacing:.12em}
+  .article strong{color:var(--text);font-weight:500}
+
+  .pullquote{border-left:3px solid var(--amber);padding:18px 24px;margin:32px 0;background:var(--amber-glow);border-radius:0 var(--radius) var(--radius) 0}
+  .pullquote p{font-family:'Instrument Serif',serif;font-size:1.1rem;font-style:italic;color:var(--text);margin:0;line-height:1.6}
+
+  /* DCA TYPE CARDS */
+  .dca-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:24px 0}
+  .dca-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;position:relative;overflow:hidden}
+  .dca-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+  .dca-card.negative::before{background:var(--red)}
+  .dca-card.neutral::before{background:var(--text-dim)}
+  .dca-card.positive::before{background:var(--green)}
+  .dca-type{font-family:'Syne',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .dca-type.negative{color:var(--red)}
+  .dca-type.neutral{color:var(--text-dim)}
+  .dca-type.positive{color:var(--green)}
+  .dca-card p{font-size:.85rem;color:var(--text-muted);margin-bottom:10px;line-height:1.65}
+  .dca-card p:last-child{margin-bottom:0}
+  .dca-outcome{font-family:'Syne',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+  .dca-outcome.negative{color:var(--red)}
+  .dca-outcome.neutral{color:var(--text-dim)}
+  .dca-outcome.positive{color:var(--text-dim)}
+
+  .step-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 24px;margin:14px 0;display:flex;gap:20px;align-items:flex-start}
+  .step-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:var(--amber);line-height:1;flex-shrink:0;width:32px}
+  .step-content h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:6px}
+  .step-content p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.65}
+  .step-content a{color:var(--amber)}
+
+  .numbers-box{background:var(--surface);border:1px solid var(--border-lt);border-radius:var(--radius-lg);padding:28px;margin:32px 0}
+  .numbers-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+  .numbers-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem}
+  .numbers-row:last-child{border-bottom:none}
+  .numbers-row span:first-child{color:var(--text-dim)}
+  .numbers-row span:last-child{font-weight:600;color:var(--text)}
+  .numbers-row.pending span:last-child{color:var(--amber)}
+
+  .warning-box{background:rgba(240,165,0,.06);border:1px solid rgba(240,165,0,.2);border-radius:var(--radius);padding:18px 20px;margin:24px 0}
+  .warning-box p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.7}
+  .warning-box strong{color:var(--amber)}
+
+  .cta-box{background:var(--surface);border:1px solid var(--border-lt);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px 32px;margin:40px 0;text-align:center}
+  .cta-box h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);margin-bottom:10px}
+  .cta-box p{color:var(--text-muted);font-size:.88rem;max-width:420px;margin:0 auto 20px;line-height:1.7}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--bg);font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);text-decoration:none;transition:all .2s}
+  .cta-btn:hover{background:#ffc02a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,165,0,.3);opacity:1}
+
+  .post-credit{font-size:.78rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:16px;margin-top:32px;font-style:italic}
+  .post-credit a{color:var(--amber)}
+
+  .sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px}
+  .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+  .sidebar-head{background:var(--surface2);padding:12px 18px;border-bottom:1px solid var(--border)}
+  .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+  .sidebar-head.amber-head{background:var(--amber)}
+  .sidebar-head.amber-head h4{color:var(--bg)}
+  .sidebar-body{padding:14px 18px}
+  .sidebar-body p{font-size:.82rem;color:var(--text-dim);margin-bottom:10px;line-height:1.6}
+  .toc-list{list-style:none}
+  .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:.82rem}
+  .toc-list li:last-child{border-bottom:none}
+  .toc-list a{color:var(--text-muted);font-weight:500;text-decoration:none;transition:color .2s}
+  .toc-list a:hover{color:var(--amber);opacity:1}
+  .sidebar-btn{display:block;text-align:center;background:var(--surface2);color:var(--text-muted);font-family:'Syne',sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px;border-radius:var(--radius);text-decoration:none;margin-top:10px;transition:all .2s;border:1px solid var(--border)}
+  .sidebar-btn:hover{border-color:var(--amber-dim);color:var(--amber);background:var(--amber-glow);opacity:1}
+  .sidebar-btn.amber-btn{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+  .sidebar-btn.amber-btn:hover{background:#ffc02a}
+
+  footer{background:var(--surface);border-top:1px solid var(--border);margin-top:80px}
+  .footer-inner{max-width:1060px;margin:0 auto;padding:48px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  @media(max-width:900px){.footer-inner{padding:32px 24px;flex-direction:column;text-align:center}}
+  .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--text)}
+  .footer-credit{font-size:12px;color:var(--text-dim)}
+  .footer-credit a{color:var(--amber)}
+  .footer-nav{display:flex;gap:20px;flex-wrap:wrap}
+  .footer-nav a{font-size:12px;color:var(--text-dim);transition:color .2s}
+  .footer-nav a:hover{color:var(--text-muted);opacity:1}
+  .footer-bottom-bar{border-top:1px solid var(--border);padding:16px 80px;max-width:1060px;margin:0 auto;font-size:11px;color:var(--text-dim);opacity:.6}
+  @media(max-width:900px){.footer-bottom-bar{padding:16px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experiments.html">The Experiments</a></li>
+    <li><a href="recommended.html">Recommended</a></li>
+    <li><a href="income-reports.html">Income Reports</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="get-the-guide.html" class="nav-cta">Get The Guide →</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="post-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="post-hero-inner">
+    <div class="post-eyebrow">
+      <span class="exp-badge">Experiment 08 · Earn While You Spend</span>
+      <span class="exp-badge pending">Redress TBC · FCA est. May 2026</span>
+      <span class="post-date">March 2026</span>
+    </div>
+    <h1>Car Finance DCA — What I Did, What My Lenders Confirmed and <em>What It Actually Means</em></h1>
+    <p class="post-sub">I wrote to three car finance lenders in July 2024. All three confirmed DCAs were attached. Here is my honest account — including what having a DCA confirmed actually does and does not mean for your chances of redress.</p>
+    <div class="post-meta">
+      <span><strong>10 min read</strong></span>
+      <span><strong>3 agreements checked</strong></span>
+      <span><strong>Free template included</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="stat-strip">
+  <div class="strip-item"><span class="strip-num">3</span><span class="strip-label">Agreements checked</span></div>
+  <div class="strip-item"><span class="strip-num">3/3</span><span class="strip-label">DCAs confirmed</span></div>
+  <div class="strip-item"><span class="strip-num">TBC</span><span class="strip-label">Redress value</span></div>
+</div>
+
+<div class="post-layout">
+  <article class="article">
+
+    <p>Before I start — Martin Lewis and MoneySavingExpert have covered car finance DCAs extensively and deserve full credit for raising awareness of this. I came across it through my own research, but his site is the most comprehensive resource available and worth reading alongside this post.</p>
+
+    <p>What I can add is my own first-hand experience of going through the process myself. This is not a financial briefing or a guarantee of compensation. It is an honest account of what I did, what happened and — crucially — what having a DCA confirmed actually does and does not mean. That last part is something most guides gloss over.</p>
+
+    <div class="pullquote">
+      <p>"Having a DCA confirmed does not automatically mean compensation is coming. The type of DCA matters. Most guides do not make this clear enough."</p>
+    </div>
+
+    <h2 id="dca-types">The Three Types of DCA — This Is What Most Guides Miss</h2>
+
+    <p>This is the part worth reading carefully before you do anything else. Discretionary commission arrangements came in three forms, and only one of them is likely to result in redress. Understanding which type applies to your agreement matters before you get your hopes up or dismiss the process entirely.</p>
+
+    <div class="dca-grid">
+      <div class="dca-card negative">
+        <div class="dca-type negative">Negative DCA</div>
+        <p>The broker or dealer used the arrangement to <strong>increase your interest rate</strong> in order to earn a higher commission. You paid more than you should have. This is the type the FCA review is primarily concerned with.</p>
+        <div class="dca-outcome negative">Likely outcome: Redress possible</div>
+      </div>
+      <div class="dca-card neutral">
+        <div class="dca-type neutral">Neutral DCA</div>
+        <p>A DCA was present on the agreement but <strong>was not used</strong> to change your rate. Your interest rate was not affected. You were not financially disadvantaged by it.</p>
+        <div class="dca-outcome neutral">Likely outcome: No compensation</div>
+      </div>
+      <div class="dca-card positive">
+        <div class="dca-type positive">Positive DCA</div>
+        <p>The arrangement was used to <strong>lower your interest rate</strong>. The dealer may have accepted a lower commission to close the deal. You benefited from a better rate than you might otherwise have received.</p>
+        <div class="dca-outcome positive">Likely outcome: No compensation</div>
+      </div>
+    </div>
+
+    <p>The letter I used — and the template on this site — asks your lender to confirm whether any DCA was present. Once they respond, the nature of that DCA determines whether you have a strong case. If they confirm a negative DCA, you are in the right territory. If they confirm neutral or positive, you are unlikely to see redress — but it is still worth having the confirmation in writing.</p>
+
+    <h2 id="how-i-found-out">How I Found Out</h2>
+
+    <p>I came across a short video on Facebook about discretionary commission arrangements on car finance. Rather than take it at face value I went and did my own research. I had three finance agreements that all fell within the relevant window — all taken out before January 2021 — so I decided to act.</p>
+
+    <p>In July 2024 I wrote directly to all three lenders myself rather than using a third party claims company. Claims companies take a significant percentage of any redress — doing it yourself means you keep everything.</p>
+
+    <h2 id="what-i-did">What I Did and What Happened</h2>
+
+    <p>The letter was straightforward. I asked each lender whether a discretionary commission arrangement had been attached to my agreement and, if confirmed, requested that my letter be treated as a formal complaint. I sent it by email to keep a timestamped record.</p>
+
+    <p>My three lenders were Black Horse, MotoNovo and Mann Island. All three responded in writing confirming that DCAs had been attached to my agreements. Importantly — in my case these were confirmed as <strong>negative DCAs</strong>. My rates had been set to their disadvantage. That distinction matters, as explained above.</p>
+
+    <div class="numbers-box">
+      <div class="numbers-box-label">My Current Position — March 2026</div>
+      <div class="numbers-row"><span>Agreements checked</span><span>3</span></div>
+      <div class="numbers-row"><span>DCAs confirmed in writing</span><span>3 of 3</span></div>
+      <div class="numbers-row"><span>DCA type confirmed</span><span>Negative (all three)</span></div>
+      <div class="numbers-row"><span>Lenders</span><span>Black Horse, MotoNovo, Mann Island</span></div>
+      <div class="numbers-row"><span>Date complaint submitted</span><span>July 2024</span></div>
+      <div class="numbers-row"><span>FCA redress scheme status</span><span>Pending — est. end May 2026</span></div>
+      <div class="numbers-row pending"><span>Redress value</span><span>Not yet confirmed</span></div>
+    </div>
+
+    <h2 id="the-wait">The Wait — What the Pause Actually Means</h2>
+
+    <p>The FCA has paused the requirement for lenders to respond to complaints while a redress scheme is being finalised. This means I am currently waiting alongside millions of others for the scheme to be confirmed and for lenders to be told how to process claims.</p>
+
+    <p>The pause is not a dismissal. If you have submitted a complaint and received acknowledgement, your complaint is in the queue. The mechanism for paying out is still being decided — that is all the pause means.</p>
+
+    <div class="warning-box">
+      <p><strong>On compensation figures:</strong> Various figures have circulated in the media about likely average payouts. None of these are confirmed. The FCA redress scheme has not been finalised and until it is, no one — including the lenders themselves — knows what individual payouts will look like. This post will be updated when confirmed figures are available.</p>
+    </div>
+
+    <h2 id="what-to-do">What to Do If You Have Not Checked Yet</h2>
+
+    <div class="step-block">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Check your agreement date</h4>
+        <p>Agreements taken out before 28 January 2021 fall within the FCA review window. After that date you are outside the scope.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Find your lender</h4>
+        <p>Check old finance documents or your credit file. Common lenders include Black Horse, MotoNovo, Mann Island, Close Brothers and Santander Consumer Finance.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Write to the lender directly</h4>
+        <p>Ask whether a DCA was attached and request it be treated as a formal complaint if confirmed. The letter template I used is available free on this site — no sign-up needed. <a href="template-car-finance.html">Get the template here</a>.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Keep everything in writing</h4>
+        <p>Send by email and keep copies of everything including acknowledgement responses. If they confirm a DCA was attached, note whether they specify the type.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Do not use a claims company</h4>
+        <p>This process is straightforward and completely free to do yourself. A claims company will take a significant percentage of any redress you receive. There is no need to use one.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Free Car Finance DCA Complaint Letter</h3>
+      <p>The letter I used — updated to reflect the 2025 court rulings. Includes the negative/neutral/positive DCA context so you know what to look for in the response.</p>
+      <a href="template-car-finance.html" class="cta-btn">Get the Free Template →</a>
+    </div>
+
+    <h2 id="next">What Comes Next</h2>
+
+    <p>This post will be updated when the FCA confirms the redress scheme and when there are actual numbers from the three agreements. The honest answer right now is that nobody knows what the payouts will look like until the scheme is finalised — expected around end of May 2026.</p>
+
+    <p>Both the council tax refund and this car finance process sit under Experiment 08 — Earn While You Spend. The principle is the same: before chasing new income, make sure you are not already losing money you do not need to lose.</p>
+
+    <p>For further detail on the background and latest FCA developments, <a href="https://www.moneysavingexpert.com" target="_blank" rel="noopener">MoneySavingExpert.com</a> is the most comprehensive resource available.</p>
+
+    <p class="post-credit">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a>.</p>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>In This Post</h4></div>
+      <div class="sidebar-body">
+        <ul class="toc-list">
+          <li><a href="#dca-types">The three types of DCA</a></li>
+          <li><a href="#how-i-found-out">How I found out</a></li>
+          <li><a href="#what-i-did">What I did &amp; what happened</a></li>
+          <li><a href="#the-wait">What the FCA pause means</a></li>
+          <li><a href="#what-to-do">What to do if you haven't checked</a></li>
+          <li><a href="#next">What comes next</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head amber-head"><h4>Free Template</h4></div>
+      <div class="sidebar-body">
+        <p>The complaint letter I used — updated for 2025 rulings. Free, no sign-up needed.</p>
+        <a href="template-car-finance.html" class="sidebar-btn amber-btn">Get the Template →</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>Related Post</h4></div>
+      <div class="sidebar-body">
+        <p>Also in Experiment 08 — how I got a £1,500 council tax refund.</p>
+        <a href="exp-blog-council-tax.html" class="sidebar-btn">Council Tax Refund →</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>The Experiment</h4></div>
+      <div class="sidebar-body">
+        <p>See all nine income streams being tested — real numbers, honest verdicts.</p>
+        <a href="experiments.html" class="sidebar-btn">All Experiments →</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Digital Income Experiment</div>
+      <div class="footer-credit" style="margin-top:6px">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></div>
+    </div>
+    <nav class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="income-reports.html">Income Reports</a>
+      <a href="blog.html">Blog</a>
+      <a href="recommended.html">Recommended</a>
+      <a href="get-the-guide.html">Get The Guide</a>
+    </nav>
+  </div>
+  <div class="footer-bottom-bar"><strong>Disclaimer:</strong> This documents one person's experience. Not financial or legal advice. Always seek independent advice for financial decisions. Nothing is sold on this site.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>

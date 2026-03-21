@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Got a £1,500 Council Tax Refund — Experiment 08 | The Digital Income Experiment</title>
+<meta name="description" content="I was in the wrong council tax band for years without knowing. Here is exactly what I did, what happened, and how you can check yours in under 10 minutes. Free template included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1}
+  em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
+  a{color:var(--amber);text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+  .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+  .nav-links a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);transition:color .2s,background .2s;text-decoration:none}
+  .nav-links a:hover{color:var(--amber);background:var(--amber-glow);opacity:1}
+  .nav-links .nav-cta{color:var(--bg);background:var(--amber);font-weight:500;padding:6px 16px}
+  .nav-links .nav-cta:hover{background:#ffc02a;color:var(--bg)}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-muted);border-radius:2px}
+  @media(max-width:900px){nav{padding:0 24px}.nav-links{display:none}.nav-hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;gap:4px}}
+
+  /* HERO */
+  .post-hero{position:relative;padding:120px 80px 72px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:600px;height:600px;background:var(--purple-dim);top:-150px;right:-100px;opacity:.35}
+  .orb-2{width:400px;height:400px;background:#2a1000;bottom:-80px;left:0;opacity:.4}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.25;pointer-events:none}
+  .post-hero-inner{max-width:760px;margin:0 auto;position:relative;animation:fadeUp .8s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .post-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+  .exp-badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--amber-glow);color:var(--amber);border:1px solid var(--amber-dim);padding:4px 12px;border-radius:100px}
+  .exp-badge.green{background:rgba(0,220,100,.1);color:var(--green);border-color:rgba(0,220,100,.2)}
+  .post-date{font-size:12px;color:var(--text-dim);letter-spacing:.06em}
+  .post-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,52px);letter-spacing:-.03em;line-height:1.05;margin-bottom:20px;color:var(--text)}
+  .post-sub{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.1rem;color:var(--text-muted);max-width:600px;line-height:1.7;margin-bottom:24px}
+  .post-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--text-dim)}
+  .post-meta strong{color:var(--text-muted)}
+
+  /* STAT STRIP */
+  .stat-strip{background:var(--amber);display:grid;grid-template-columns:repeat(3,1fr)}
+  .strip-item{padding:20px 24px;text-align:center;border-right:1px solid rgba(13,11,18,.15)}
+  .strip-item:last-child{border-right:none}
+  .strip-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:var(--bg);display:block;line-height:1}
+  .strip-label{font-size:.65rem;font-weight:600;color:rgba(13,11,18,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;display:block}
+
+  /* LAYOUT */
+  .post-layout{max-width:1060px;margin:0 auto;padding:60px 80px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start}
+  @media(max-width:900px){.post-layout{grid-template-columns:1fr;padding:48px 24px}.sidebar{order:-1}}
+  @media(max-width:640px){.post-hero{padding:100px 24px 60px}}
+
+  /* ARTICLE */
+  .article p{font-size:.95rem;margin-bottom:20px;color:var(--text-muted);line-height:1.85}
+  .article p a{color:var(--amber)}
+  .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--text);margin:52px 0 16px;letter-spacing:-.01em;border-bottom:1px solid var(--border);padding-bottom:12px}
+  .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:.78rem;color:var(--purple-lt);margin:28px 0 10px;text-transform:uppercase;letter-spacing:.12em}
+  .article strong{color:var(--text);font-weight:500}
+
+  .pullquote{border-left:3px solid var(--amber);padding:18px 24px;margin:32px 0;background:var(--amber-glow);border-radius:0 var(--radius) var(--radius) 0}
+  .pullquote p{font-family:'Instrument Serif',serif;font-size:1.1rem;font-style:italic;color:var(--text);margin:0;line-height:1.6}
+
+  .step-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 24px;margin:14px 0;display:flex;gap:20px;align-items:flex-start}
+  .step-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:var(--amber);line-height:1;flex-shrink:0;width:32px}
+  .step-content h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:6px}
+  .step-content p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.65}
+  .step-content a{color:var(--amber)}
+
+  .numbers-box{background:var(--surface);border:1px solid var(--border-lt);border-radius:var(--radius-lg);padding:28px;margin:32px 0}
+  .numbers-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+  .numbers-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem}
+  .numbers-row:last-child{border-bottom:none}
+  .numbers-row span:first-child{color:var(--text-dim)}
+  .numbers-row span:last-child{font-weight:600;color:var(--text)}
+  .numbers-row.total span{color:var(--amber)!important;font-size:.95rem}
+
+  .warning-box{background:rgba(240,165,0,.06);border:1px solid rgba(240,165,0,.2);border-radius:var(--radius);padding:18px 20px;margin:24px 0}
+  .warning-box p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.7}
+  .warning-box strong{color:var(--amber)}
+
+  .band-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.85rem}
+  .band-table th{font-family:'Syne',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;background:var(--surface2);color:var(--text-dim);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border)}
+  .band-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-muted)}
+  .band-table tr:last-child td{border-bottom:none}
+  .band-table td:first-child{font-family:'Syne',sans-serif;font-weight:800;color:var(--text)}
+  .band-table tr.highlight td{background:var(--amber-glow)}
+  .band-table tr.highlight td:first-child{color:var(--amber)}
+
+  .cta-box{background:var(--surface);border:1px solid var(--border-lt);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px 32px;margin:40px 0;text-align:center}
+  .cta-box h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);margin-bottom:10px}
+  .cta-box p{color:var(--text-muted);font-size:.88rem;max-width:420px;margin:0 auto 20px;line-height:1.7}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--bg);font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);text-decoration:none;transition:all .2s}
+  .cta-btn:hover{background:#ffc02a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,165,0,.3);opacity:1}
+
+  .post-credit{font-size:.78rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:16px;margin-top:32px;font-style:italic}
+  .post-credit a{color:var(--amber)}
+
+  /* SIDEBAR */
+  .sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px}
+  .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+  .sidebar-head{background:var(--surface2);padding:12px 18px;border-bottom:1px solid var(--border)}
+  .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+  .sidebar-head.amber-head{background:var(--amber)}
+  .sidebar-head.amber-head h4{color:var(--bg)}
+  .sidebar-body{padding:14px 18px}
+  .sidebar-body p{font-size:.82rem;color:var(--text-dim);margin-bottom:10px;line-height:1.6}
+  .toc-list{list-style:none}
+  .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:.82rem}
+  .toc-list li:last-child{border-bottom:none}
+  .toc-list a{color:var(--text-muted);font-weight:500;text-decoration:none;transition:color .2s}
+  .toc-list a:hover{color:var(--amber);opacity:1}
+  .sidebar-btn{display:block;text-align:center;background:var(--surface2);color:var(--text-muted);font-family:'Syne',sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px;border-radius:var(--radius);text-decoration:none;margin-top:10px;transition:all .2s;border:1px solid var(--border)}
+  .sidebar-btn:hover{border-color:var(--amber-dim);color:var(--amber);background:var(--amber-glow);opacity:1}
+  .sidebar-btn.amber-btn{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+  .sidebar-btn.amber-btn:hover{background:#ffc02a}
+
+  /* FOOTER */
+  footer{background:var(--surface);border-top:1px solid var(--border);margin-top:80px}
+  .footer-inner{max-width:1060px;margin:0 auto;padding:48px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  @media(max-width:900px){.footer-inner{padding:32px 24px;flex-direction:column;text-align:center}}
+  .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--text)}
+  .footer-credit{font-size:12px;color:var(--text-dim)}
+  .footer-credit a{color:var(--amber)}
+  .footer-nav{display:flex;gap:20px;flex-wrap:wrap}
+  .footer-nav a{font-size:12px;color:var(--text-dim);transition:color .2s}
+  .footer-nav a:hover{color:var(--text-muted);opacity:1}
+  .footer-bottom-bar{border-top:1px solid var(--border);padding:16px 80px;max-width:1060px;margin:0 auto;font-size:11px;color:var(--text-dim);opacity:.6}
+  @media(max-width:900px){.footer-bottom-bar{padding:16px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experiments.html">The Experiments</a></li>
+    <li><a href="recommended.html">Recommended</a></li>
+    <li><a href="income-reports.html">Income Reports</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="get-the-guide.html" class="nav-cta">Get The Guide →</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="post-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="post-hero-inner">
+    <div class="post-eyebrow">
+      <span class="exp-badge">Experiment 08 · Earn While You Spend</span>
+      <span class="exp-badge green">£1,500+ Recovered</span>
+      <span class="post-date">March 2026</span>
+    </div>
+    <h1>How I Got a <em>£1,500 Council Tax Refund</em> — and How to Check if You're Owed One Too</h1>
+    <p class="post-sub">I was in the wrong council tax band for years without knowing. Here is exactly what I did about it, what happened, and how you can check yours in under 10 minutes.</p>
+    <div class="post-meta">
+      <span><strong>8 min read</strong></span>
+      <span><strong>Free template included</strong></span>
+      <span><strong>No cost to challenge</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="stat-strip">
+  <div class="strip-item"><span class="strip-num">£1,500+</span><span class="strip-label">Refund received</span></div>
+  <div class="strip-item"><span class="strip-num">~10 min</span><span class="strip-label">To check yours</span></div>
+  <div class="strip-item"><span class="strip-num">Free</span><span class="strip-label">No cost to challenge</span></div>
+</div>
+
+<div class="post-layout">
+  <article class="article">
+
+    <p>This one does not fit neatly into any of the nine income stream experiments. It is not a side hustle. It is not passive income. It is something simpler and in some ways more satisfying — money that was already mine, that I had been overpaying for years without realising.</p>
+
+    <p>I am writing it up here because this is what the Experiment is actually about. Not just chasing new income streams, but paying attention to where money is going, asking questions and being willing to push back when something does not add up. The council tax refund was a product of exactly that mindset.</p>
+
+    <div class="pullquote">
+      <p>"I was in the wrong council tax band for years. The system does not automatically correct it. You have to spot it yourself and challenge it."</p>
+    </div>
+
+    <h2 id="how-it-works">How Council Tax Banding Works</h2>
+
+    <p>Every property in England, Scotland and Wales is assigned a council tax band — from A (lowest) to H (highest). These bands were set in 1991, based on estimated property values at that time. The critical word there is <em>estimated</em>. The Valuation Office Agency (VOA) did not survey every property individually in 1991. They made assumptions, and some of those assumptions were wrong.</p>
+
+    <p>Your council tax band determines how much you pay each year. If your band is too high, you have been overpaying — and because bands were set back in 1991, if your property has been in the wrong band since then, that overpayment stretches back a long way.</p>
+
+    <p>The system does not automatically fix mistakes. Your council will not write to you and say you have been in the wrong band. You have to identify it yourself and make a formal challenge.</p>
+
+    <h2 id="two-checks">The Two Checks You Must Do First</h2>
+
+    <p>Before you challenge anything, you need to pass two checks. I only submitted my challenge after both came back positive. This is important — if you only do one and the evidence is thin, you could end up in a worse position. Do both.</p>
+
+    <h3>Check 1 — The Neighbours Check</h3>
+
+    <p>Go to <a href="https://www.gov.uk/council-tax-bands" target="_blank" rel="noopener">gov.uk/council-tax-bands</a> and enter your postcode. You will see your own band and every other property nearby. Look at similar properties on your street — same size, same age, same type. If comparable homes are in a lower band, you may have a case.</p>
+
+    <p>When I did this I looked at around 10 to 11 nearby properties to build a solid picture. One or two comparisons is not enough — you want a clear pattern. Make a list of the addresses and their bands. These become your evidence.</p>
+
+    <div class="warning-box">
+      <p><strong>Important:</strong> A challenge can result in your band going up as well as down. There have been cases where a resident challenged their band and their neighbours ended up being upbanded instead. Only proceed if the comparable evidence is clear and consistent.</p>
+    </div>
+
+    <h3>Check 2 — The 1991 Valuation Check</h3>
+
+    <p>Bands were assigned based on 1991 property values. To verify your case, you need to estimate what your property would have been worth in 1991. This is used as supporting evidence rather than definitive proof, but it is an important part of building a complete picture.</p>
+
+    <p>The process involves finding your property's most recent sale price, using a free house price tool such as Zoopla, Rightmove or Nethouseprices to find comparable sales, and then working backwards to estimate what the property was worth in 1991. To do the actual calculation I used the <a href="https://www.nationwide.co.uk/house-price-index/" target="_blank" rel="noopener">Nationwide House Price Index calculator</a>. You enter a known sale price and date and it estimates what the property was worth at any given point in time. Nationwide are clear it is a guide rather than a precise valuation — but it was enough to confirm my property sat within Band C territory in 1991, not Band D.</p>
+
+    <p>The 1991 band thresholds for England are:</p>
+
+    <table class="band-table">
+      <thead><tr><th>Band</th><th>England — 1991 Property Value</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Under £40,000</td></tr>
+        <tr><td>B</td><td>£40,001 – £52,000</td></tr>
+        <tr class="highlight"><td>C</td><td>£52,001 – £68,000</td></tr>
+        <tr class="highlight"><td>D</td><td>£68,001 – £88,000</td></tr>
+        <tr><td>E</td><td>£88,001 – £120,000</td></tr>
+        <tr><td>F</td><td>£120,001 – £160,000</td></tr>
+        <tr><td>G</td><td>£160,001 – £320,000</td></tr>
+        <tr><td>H</td><td>Over £320,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="how-to-challenge">How to Submit Your Challenge</h2>
+
+    <div class="step-block">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Get your evidence together</h4>
+        <p>List the comparable properties you have found — addresses, band, and a brief description of why they are comparable (size, type, same street). Include your 1991 valuation estimate as supporting evidence.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Write your challenge letter</h4>
+        <p>Submit a formal request to the VOA referencing your comparable properties. We have created a free template you can copy and adapt — <a href="template-council-tax.html">get it here</a>. No solicitor needed.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Submit and be patient — this takes time</h4>
+        <p>You can submit online at <a href="https://www.gov.uk/challenge-council-tax-band" target="_blank" rel="noopener">gov.uk/challenge-council-tax-band</a> or by post. Then wait. My challenge took over two years from submission to final decision. That is not unusual. Submit as soon as possible and be prepared for a long process.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Choose your refund option</h4>
+        <p>If your challenge is successful, you will typically be offered a credit against future bills. But you can also request a full cash refund. I called the council directly after the decision and asked for the full amount paid back. It was agreed on the call and the money was in my account within two weeks.</p>
+      </div>
+    </div>
+
+    <h2 id="the-numbers">The Numbers — What I Actually Got</h2>
+
+    <div class="numbers-box">
+      <div class="numbers-box-label">Council Tax Challenge — Real Numbers</div>
+      <div class="numbers-row"><span>Previous band</span><span>Band D</span></div>
+      <div class="numbers-row"><span>New band</span><span>Band C</span></div>
+      <div class="numbers-row"><span>Annual saving going forward</span><span>~£240 per year</span></div>
+      <div class="numbers-row"><span>Time for investigation to complete</span><span>Over 2 years</span></div>
+      <div class="numbers-row"><span>Refund method</span><span>Full cash refund (by request)</span></div>
+      <div class="numbers-row"><span>Time to receive refund after decision</span><span>2 weeks</span></div>
+      <div class="numbers-row total"><span>Total refund received</span><span>£1,500+</span></div>
+    </div>
+
+    <p>The key thing I would highlight: you do not have to take the credit. I called the council after the decision was confirmed, asked for a full cash refund of the overpaid amount and it was sorted in a single phone call. The money arrived within two weeks. If you are in this situation, it is worth asking.</p>
+
+    <h2 id="worth-doing">Is It Worth Doing?</h2>
+
+    <p>Yes — emphatically. The process is free, the potential return is significant and the only real cost is time. The fact that it can take two years or more is the main reason to get your challenge in as soon as possible. The sooner you submit, the sooner the clock starts.</p>
+
+    <p>Compare it to selling digital products, running affiliate links or completing surveys. Hours of ongoing work for modest returns. A successful council tax challenge recovers money you had already handed over, with no ongoing effort required once the challenge is submitted.</p>
+
+    <div class="cta-box">
+      <h3>Free Council Tax Challenge Letter Template</h3>
+      <p>The template I used — adapted for general use. Add your details, your comparable properties and send. Free, no sign-up required.</p>
+      <a href="template-council-tax.html" class="cta-btn">Get the Free Template →</a>
+    </div>
+
+    <h2 id="next">What Comes Next</h2>
+
+    <p>The council tax challenge is one of two money-back stories documented in Experiment 08. The other is car finance — specifically the FCA's review of discretionary commission arrangements (DCA), which affects millions of agreements taken out before 2021. I have three agreements currently under review. <a href="exp-blog-car-finance-dca.html">That post is here.</a></p>
+
+    <p>Both sit under Experiment 08 — Earn While You Spend. Before chasing new income, make sure you are not already losing money you do not need to lose.</p>
+
+    <p class="post-credit">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a>.</p>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>In This Post</h4></div>
+      <div class="sidebar-body">
+        <ul class="toc-list">
+          <li><a href="#how-it-works">How banding works</a></li>
+          <li><a href="#two-checks">The two checks first</a></li>
+          <li><a href="#how-to-challenge">How to submit a challenge</a></li>
+          <li><a href="#the-numbers">The real numbers</a></li>
+          <li><a href="#worth-doing">Is it worth doing?</a></li>
+          <li><a href="#next">What comes next</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head amber-head"><h4>Free Template</h4></div>
+      <div class="sidebar-body">
+        <p>The council tax challenge letter — free, no sign-up required.</p>
+        <a href="template-council-tax.html" class="sidebar-btn amber-btn">Get the Template →</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>Related Post</h4></div>
+      <div class="sidebar-body">
+        <p>Also in Experiment 08 — the car finance DCA process.</p>
+        <a href="exp-blog-car-finance-dca.html" class="sidebar-btn">Car Finance DCA →</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>The Experiment</h4></div>
+      <div class="sidebar-body">
+        <p>See all nine income streams being tested — real numbers, honest verdicts.</p>
+        <a href="experiments.html" class="sidebar-btn">All Experiments →</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Digital Income Experiment</div>
+      <div class="footer-credit" style="margin-top:6px">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></div>
+    </div>
+    <nav class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="income-reports.html">Income Reports</a>
+      <a href="blog.html">Blog</a>
+      <a href="recommended.html">Recommended</a>
+      <a href="get-the-guide.html">Get The Guide</a>
+    </nav>
+  </div>
+  <div class="footer-bottom-bar"><strong>Disclaimer:</strong> This documents one person's experience. Results are personal and not typical. Not financial or legal advice. Nothing is sold on this site.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — The Digital Income Experiment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1}
+  em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
+  a{color:inherit;text-decoration:none}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px}
+  .nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+  .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+  .nav-links a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);transition:color .2s,background .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--amber);background:var(--amber-glow)}
+  .nav-links .nav-cta{color:var(--bg);background:var(--amber);font-weight:500;padding:6px 16px}
+  .nav-links .nav-cta:hover{background:#ffc02a;color:var(--bg)}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-muted);border-radius:2px}
+  @media(max-width:900px){nav{padding:0 24px}.nav-links{display:none}.nav-hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;gap:4px}}
+
+  .page-hero{position:relative;padding:140px 80px 80px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:500px;height:500px;background:var(--purple-dim);top:-100px;right:-80px;opacity:.4}
+  .orb-2{width:280px;height:280px;background:#1a0a00;bottom:-40px;left:60px;opacity:.4}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.3;pointer-events:none}
+  .page-hero-inner{max-width:1200px;margin:0 auto;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+  @media(max-width:900px){.page-hero-inner{grid-template-columns:1fr}}
+  .page-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber-dim);background:var(--amber-glow);padding:6px 14px;border-radius:100px;margin-bottom:32px}
+  .page-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .page-hero h1{font-size:clamp(44px,7vw,80px);font-weight:800;letter-spacing:-.03em;line-height:.95;animation:fadeUp .8s ease both}
+  .page-hero-sub{font-size:15px;color:var(--text-muted);margin-top:24px;line-height:1.8;animation:fadeUp .8s ease .15s both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+  /* FEATURED POST */
+  .featured-post{background:var(--surface);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);animation:fadeUp .8s ease .2s both}
+  .feat-post-img{height:160px;background:linear-gradient(135deg,#1a0a2e,#3d2060);display:flex;align-items:flex-end;padding:20px;position:relative}
+  .feat-post-badge{font-size:10px;letter-spacing:.15em;text-transform:uppercase;background:var(--amber-glow);color:var(--amber);border:1px solid var(--amber-dim);padding:4px 12px;border-radius:100px}
+  .feat-post-body{padding:24px}
+  .feat-post-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.25}
+  .feat-post-excerpt{font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:20px}
+  .feat-post-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-dim);border-top:1px solid var(--border);padding-top:16px}
+  .feat-post-link{color:var(--amber);transition:opacity .2s}
+  .feat-post-link:hover{opacity:.7}
+
+  /* CONTENT */
+  .content-wrap{max-width:1200px;margin:0 auto;padding:80px}
+  @media(max-width:900px){.content-wrap{padding:60px 24px}.page-hero{padding:100px 24px 60px}}
+
+  .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px}
+  .section-label::before{content:'';display:block;width:24px;height:1px;background:var(--purple-lt)}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* FILTER */
+  .filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+  .tag-btn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;border:1px solid var(--border);background:none;color:var(--text-dim);cursor:pointer;transition:all .2s}
+  .tag-btn:hover{border-color:var(--border-lt);color:var(--text-muted)}
+  .tag-btn.active{background:var(--amber-glow);color:var(--amber);border-color:var(--amber-dim)}
+
+  /* BLOG GRID */
+  .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  @media(max-width:800px){.blog-grid{grid-template-columns:1fr}}
+
+  .blog-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+  .blog-card:hover{transform:translateY(-4px);border-color:var(--border-lt)}
+  .blog-card-img{height:100px;display:flex;align-items:flex-end;padding:16px;position:relative}
+  .blog-card-cat{font-size:10px;letter-spacing:.15em;text-transform:uppercase;background:var(--amber-glow);color:var(--amber);border:1px solid var(--amber-dim);padding:3px 10px;border-radius:100px}
+  .blog-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+  .blog-card-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
+  .blog-card-excerpt{font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;margin-bottom:20px}
+  .blog-card-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:16px;font-size:12px}
+  .blog-card-date{color:var(--text-dim)}
+  .blog-card-read{color:var(--purple-lt);display:flex;align-items:center;gap:4px;transition:color .2s}
+  .blog-card:hover .blog-card-read{color:var(--amber)}
+  .blog-card-exp-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:100px;margin-bottom:10px;display:inline-block}
+
+  /* BG VARIANTS */
+  .bg-01{background:linear-gradient(135deg,#1a0a2e,#2d1560)}
+  .bg-02{background:linear-gradient(135deg,#1a0f00,#3d2600)}
+  .bg-03{background:linear-gradient(135deg,#0a1a2e,#0d3060)}
+  .bg-04{background:linear-gradient(135deg,#1a000a,#3d0028)}
+  .bg-05{background:linear-gradient(135deg,#001a10,#003d28)}
+  .bg-06{background:linear-gradient(135deg,#1a1000,#3d2e00)}
+
+  /* CATEGORIES SIDEBAR STYLE - Topics strip */
+  .topics-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .topics-inner{max-width:1200px;margin:0 auto;padding:48px 80px;display:grid;grid-template-columns:1fr 3fr;gap:60px;align-items:start}
+  @media(max-width:900px){.topics-inner{padding:40px 24px;grid-template-columns:1fr;gap:32px}}
+  .topics-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:4px}
+  .topics-sub{font-size:13px;color:var(--text-dim)}
+  .topics-grid{display:flex;flex-wrap:wrap;gap:10px}
+  .topic-chip{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;background:var(--bg);border:1px solid var(--border);padding:8px 16px;border-radius:var(--radius);color:var(--text-muted);transition:all .2s;cursor:pointer}
+  .topic-chip:hover{border-color:var(--amber-dim);color:var(--amber);background:var(--amber-glow)}
+  .topic-chip .chip-count{font-size:10px;color:var(--text-dim)}
+
+  /* COMING SOON CARD */
+  .blog-card.coming-soon{opacity:.5;pointer-events:none}
+
+  /* FOOTER */
+  footer{background:var(--surface);border-top:1px solid var(--border)}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:60px 80px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px}
+  @media(max-width:900px){.footer-inner{padding:40px 24px;grid-template-columns:1fr 1fr;gap:40px}}
+  @media(max-width:600px){.footer-inner{grid-template-columns:1fr}}
+  .footer-brand h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:12px}
+  .footer-brand p{font-size:13px;color:var(--text-muted);line-height:1.8;max-width:280px;margin-bottom:16px}
+  .footer-credit{font-size:12px;color:var(--text-dim)}
+  .footer-credit a{color:var(--amber)}
+  .footer-col h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
+  .footer-col ul{list-style:none}
+  .footer-col ul li{margin-bottom:10px}
+  .footer-col ul li a{font-size:13px;color:var(--text-dim);transition:color .2s}
+  .footer-col ul li a:hover{color:var(--text-muted)}
+  .footer-bottom{border-top:1px solid var(--border);padding:24px 80px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-dim)}
+  @media(max-width:900px){.footer-bottom{padding:20px 24px;flex-direction:column;gap:8px;text-align:center}}
+  .footer-bottom a{color:var(--amber)}
+  .footer-disclaimer{border-top:1px solid var(--border);padding:20px 80px;max-width:1200px;margin:0 auto;font-size:11px;color:var(--text-dim);line-height:1.6;opacity:.7}
+  @media(max-width:900px){.footer-disclaimer{padding:16px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experiments.html">The Experiments</a></li>
+    <li><a href="recommended.html">Recommended</a></li>
+    <li><a href="income-reports.html">Income Reports</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="get-the-guide.html" class="nav-cta">Get The Guide →</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-label">Honest findings. No filler.</div>
+      <h1>From the<br><em>Experiment.</em></h1>
+      <p class="page-hero-sub">Deeper dives into each income stream, honest reviews of platforms, and detailed guides — all grounded in real experience from inside the Experiment.</p>
+    </div>
+    <a href="exp-blog-01-ai-prompts.html" class="featured-post">
+      <div class="feat-post-img bg-01">
+        <span class="feat-post-badge">Latest post</span>
+      </div>
+      <div class="feat-post-body">
+        <h3 class="feat-post-title">The AI Prompts That Actually Work for Passive Income</h3>
+        <p class="feat-post-excerpt">What happens when you use AI as a genuine tool — not just for content, but for KDP book creation, Fiverr gig copy, and digital product development?</p>
+        <div class="feat-post-meta">
+          <span>Experiment Blog 01 · March 2026</span>
+          <span class="feat-post-link">Read →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section class="topics-strip">
+  <div class="topics-inner">
+    <div>
+      <div class="topics-title">Topics</div>
+      <div class="topics-sub">Browse by theme</div>
+    </div>
+    <div class="topics-grid">
+      <span class="topic-chip" onclick="filterBlog('all',this)">All posts <span class="chip-count">(4)</span></span>
+      <span class="topic-chip" onclick="filterBlog('kdp',this)">KDP &amp; Publishing</span>
+      <span class="topic-chip" onclick="filterBlog('games',this)">Earn by playing</span>
+      <span class="topic-chip" onclick="filterBlog('cashback',this)">Cashback</span>
+      <span class="topic-chip" onclick="filterBlog('income',this)">Income overviews</span>
+      <span class="topic-chip" onclick="filterBlog('guides',this)">Guides &amp; how-tos</span>
+      <span class="topic-chip" onclick="filterBlog('earnwhile',this)">Earn while you spend</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<div class="content-wrap">
+  <div class="section-label">All posts</div>
+  <div class="filter-row" id="filter-row" style="display:none"></div>
+
+  <div class="blog-grid" id="blog-grid">
+
+    <a href="exp-blog-01-ai-prompts.html" class="blog-card reveal" data-tags="kdp guides">
+      <div class="blog-card-img bg-01">
+        <span class="blog-card-cat">AI &amp; Prompts</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Experiment Blog 01</span>
+        <h3 class="blog-card-title">The AI Prompts That Actually Work for Passive Income</h3>
+        <p class="blog-card-excerpt">Testing AI as a real working tool across KDP, Fiverr gig descriptions, and digital product development. What works, what wastes time.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">March 2026</span>
+          <span class="blog-card-read">Read post →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="exp-blog-02-income-overview.html" class="blog-card reveal" data-tags="income">
+      <div class="blog-card-img bg-02">
+        <span class="blog-card-cat">Income Overview</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Experiment Blog 02</span>
+        <h3 class="blog-card-title">9 Income Streams: What We're Testing and Why</h3>
+        <p class="blog-card-excerpt">The full rationale behind choosing these nine experiments. What each one requires, what the ceiling looks like, and how they interact with each other.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">March 2026</span>
+          <span class="blog-card-read">Read post →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="exp-blog-03-games.html" class="blog-card reveal" data-tags="games">
+      <div class="blog-card-img bg-03">
+        <span class="blog-card-cat">Earn by Playing</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Experiment Blog 03</span>
+        <h3 class="blog-card-title">Freecash vs InboxPounds vs EarnLabs: The Real Numbers</h3>
+        <p class="blog-card-excerpt">All three platforms tested simultaneously. Real hourly rates, cashout timelines, and what the experience is actually like after the first few weeks.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">March 2026</span>
+          <span class="blog-card-read">Read post →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="exp-blog-04-cashback.html" class="blog-card reveal" data-tags="cashback">
+      <div class="blog-card-img bg-04">
+        <span class="blog-card-cat">Cashback</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Experiment Blog 04</span>
+        <h3 class="blog-card-title">Quidco vs TopCashback: A Live Head-to-Head Test</h3>
+        <p class="blog-card-excerpt">Running both platforms simultaneously and comparing rates, merchant coverage, and payout speed on the same purchases. Who actually wins?</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">March 2026</span>
+          <span class="blog-card-read">Read post →</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="blog-card coming-soon reveal" data-tags="earnwhile">
+      <div class="blog-card-img bg-05">
+        <span class="blog-card-cat">Earn While You Spend</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Coming soon</span>
+        <h3 class="blog-card-title">The Council Tax Rebate: How to Claim What You're Owed</h3>
+        <p class="blog-card-excerpt">A full walkthrough of the council tax discount and rebate process — who qualifies, how to apply, what to expect, and how much it's actually worth.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Publishing soon</span>
+          <span class="blog-card-read" style="color:var(--text-dim)">Coming →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card coming-soon reveal" data-tags="earnwhile guides">
+      <div class="blog-card-img bg-06">
+        <span class="blog-card-cat">Car Finance DCA</span>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-card-exp-tag">Coming soon</span>
+        <h3 class="blog-card-title">Car Finance Mis-Selling: What the DCA Ruling Means For You</h3>
+        <p class="blog-card-excerpt">Millions of UK drivers may be owed money from hidden commission arrangements on their car finance. Here's the claim process, the timeline, and what to realistically expect.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Publishing soon</span>
+          <span class="blog-card-read" style="color:var(--text-dim)">Coming →</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>The Digital Income Experiment</h3>
+      <p>An independent project documenting online income testing. Nothing sold. No agenda. Just honest numbers.</p>
+      <p class="footer-credit">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experiments.html">The Experiments</a></li>
+      <li><a href="recommended.html">Recommended</a></li>
+      <li><a href="income-reports.html">Income Reports</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Resources</h4><ul>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="get-the-guide.html">The First 90 Days</a></li>
+      <li><a href="recommended.html#disclosure">Affiliate Disclosure</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Digital Income Experiment. All rights reserved.</span>
+    <span>Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></span>
+  </div>
+  <div class="footer-disclaimer"><strong>Disclaimer:</strong> This site documents one person's experience testing online income methods. Results are personal and not typical. Some links may be affiliate links — always disclosed. Nothing here is financial advice.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  function filterBlog(tag,chip){
+    document.querySelectorAll('.topic-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    document.querySelectorAll('#blog-grid .blog-card, #blog-grid a.blog-card').forEach(card=>{
+      if(tag==='all'){card.style.display='flex';return}
+      const tags=(card.dataset.tags||'').split(' ');
+      card.style.display=tags.includes(tag)?'flex':'none';
+    });
+  }
+</script>
+</body>
+</html>
