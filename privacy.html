@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — The Digital Income Experiment</title>
+<meta name="description" content="Privacy Policy for The Digital Income Experiment. How we collect, use and protect your personal data. We collect only what we need and never sell your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1}
+  em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
+  a{color:var(--amber);text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+  .nav-links a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);transition:color .2s,background .2s;text-decoration:none}
+  .nav-links a:hover{color:var(--amber);background:var(--amber-glow);opacity:1}
+  .nav-links .nav-cta{color:var(--bg);background:var(--amber);font-weight:500;padding:6px 16px}
+  .nav-links .nav-cta:hover{background:#ffc02a;color:var(--bg)}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-muted);border-radius:2px}
+  @media(max-width:900px){nav{padding:0 24px}.nav-links{display:none}.nav-hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;gap:4px}}
+
+  .page-hero{position:relative;padding:130px 80px 72px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:440px;height:440px;background:var(--purple-dim);top:-120px;right:-80px;opacity:.35}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.25;pointer-events:none}
+  .hero-inner{max-width:800px;margin:0 auto;position:relative;animation:fadeUp .7s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .page-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber-dim);background:var(--amber-glow);padding:5px 14px;border-radius:100px;margin-bottom:28px}
+  .page-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .page-hero h1{font-size:clamp(36px,6vw,68px);font-weight:800;letter-spacing:-.03em;line-height:.95;margin-bottom:16px}
+  .page-hero p{font-size:14px;color:var(--text-muted);max-width:520px;line-height:1.8;margin-top:16px}
+  .last-updated{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--text-dim);margin-top:20px}
+  @media(max-width:640px){.page-hero{padding:100px 24px 56px}}
+
+  /* TOC */
+  .toc-wrap{background:var(--surface);border-bottom:1px solid var(--border)}
+  .toc-inner{max-width:800px;margin:0 auto;padding:28px 80px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  @media(max-width:900px){.toc-inner{padding:20px 24px}}
+  .toc-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);flex-shrink:0}
+  .toc-links{display:flex;gap:8px;flex-wrap:wrap}
+  .toc-link{font-size:12px;color:var(--text-dim);padding:4px 12px;border:1px solid var(--border);border-radius:100px;transition:all .2s;white-space:nowrap}
+  .toc-link:hover{color:var(--amber);border-color:var(--amber-dim);background:var(--amber-glow);opacity:1}
+
+  /* CONTENT */
+  .content-wrap{max-width:800px;margin:0 auto;padding:72px 80px 100px}
+  @media(max-width:900px){.content-wrap{padding:56px 24px 80px}}
+
+  .section{margin-bottom:56px;scroll-margin-top:100px}
+  .section:last-child{margin-bottom:0}
+
+  .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:16px}
+  .section-label::before{content:'';display:block;width:20px;height:1px;background:var(--purple-lt)}
+
+  .section h2{font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:800;letter-spacing:-.02em;margin-bottom:20px;color:var(--text)}
+
+  .prose p{font-size:.95rem;color:var(--text-muted);line-height:1.9;margin-bottom:18px}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--text);font-weight:500}
+  .prose a{color:var(--amber)}
+  .prose ul{list-style:none;margin:16px 0;display:flex;flex-direction:column;gap:10px}
+  .prose ul li{font-size:.92rem;color:var(--text-muted);padding-left:20px;position:relative;line-height:1.7}
+  .prose ul li::before{content:'→';position:absolute;left:0;color:var(--amber);font-size:.85rem}
+
+  .data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.88rem}
+  .data-table th{font-family:'Syne',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;background:var(--surface2);color:var(--text-dim);padding:10px 16px;text-align:left;border-bottom:1px solid var(--border)}
+  .data-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text-muted);vertical-align:top;line-height:1.6}
+  .data-table tr:last-child td{border-bottom:none}
+  .data-table td:first-child{color:var(--text);font-weight:500;white-space:nowrap}
+  .data-table tr:hover td{background:var(--surface2)}
+
+  .highlight-box{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:24px 28px;margin:28px 0}
+  .highlight-box p{font-size:.9rem;color:var(--text-muted);line-height:1.8;margin:0}
+  .highlight-box p+p{margin-top:10px}
+  .highlight-box strong{color:var(--amber)}
+
+  .rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  @media(max-width:600px){.rights-grid{grid-template-columns:1fr}}
+  .right-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px}
+  .right-card h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text)}
+  .right-card p{font-size:.82rem;color:var(--text-muted);line-height:1.7;margin:0}
+
+  .divider{height:1px;background:var(--border);margin:48px 0}
+
+  /* FOOTER */
+  footer{background:var(--surface);border-top:1px solid var(--border)}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:60px 80px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px}
+  @media(max-width:900px){.footer-inner{padding:40px 24px;grid-template-columns:1fr 1fr;gap:40px}}
+  @media(max-width:600px){.footer-inner{grid-template-columns:1fr}}
+  .footer-brand h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:12px}
+  .footer-brand p{font-size:13px;color:var(--text-muted);line-height:1.8;max-width:280px;margin-bottom:16px}
+  .footer-credit{font-size:12px;color:var(--text-dim)}
+  .footer-credit a{color:var(--amber)}
+  .footer-col h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
+  .footer-col ul{list-style:none}
+  .footer-col ul li{margin-bottom:10px}
+  .footer-col ul li a{font-size:13px;color:var(--text-dim);transition:color .2s}
+  .footer-col ul li a:hover{color:var(--text-muted)}
+  .footer-bottom{border-top:1px solid var(--border);padding:24px 80px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-dim)}
+  @media(max-width:900px){.footer-bottom{padding:20px 24px;flex-direction:column;gap:8px;text-align:center}}
+  .footer-bottom a{color:var(--amber)}
+  .footer-disclaimer{border-top:1px solid var(--border);padding:20px 80px;max-width:1200px;margin:0 auto;font-size:11px;color:var(--text-dim);line-height:1.6;opacity:.7}
+  @media(max-width:900px){.footer-disclaimer{padding:16px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo-icon.png" alt="The Digital Income Experiment" style="height:32px;width:auto;display:block;">
+    The Digital Income Experiment
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experiments.html">The Experiments</a></li>
+    <li><a href="recommended.html">Recommended</a></li>
+    <li><a href="income-reports.html">Income Reports</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="get-the-guide.html" class="nav-cta">Get The Guide →</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-inner">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>We collect very little data and we never sell it. This policy explains exactly what we collect, why, and what you can do about it.</p>
+    <div class="last-updated">Last updated: March 2026</div>
+  </div>
+</section>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <div class="toc-inner">
+    <span class="toc-label">Jump to</span>
+    <div class="toc-links">
+      <a href="#who-we-are" class="toc-link">Who we are</a>
+      <a href="#what-we-collect" class="toc-link">What we collect</a>
+      <a href="#how-we-use-it" class="toc-link">How we use it</a>
+      <a href="#email-marketing" class="toc-link">Email &amp; Sender</a>
+      <a href="#cookies" class="toc-link">Cookies</a>
+      <a href="#third-parties" class="toc-link">Third parties</a>
+      <a href="#your-rights" class="toc-link">Your rights</a>
+      <a href="#contact" class="toc-link">Contact</a>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <div class="highlight-box">
+    <p><strong>The short version:</strong> We only collect your email address if you choose to sign up. We use it to send what you asked for. We never sell it, share it for marketing, or use it for anything you didn't agree to. You can unsubscribe or ask us to delete it any time.</p>
+  </div>
+
+  <div class="section" id="who-we-are">
+    <div class="section-label">01</div>
+    <h2>Who We Are</h2>
+    <div class="prose">
+      <p>The Digital Income Experiment is an independent project run by a private individual and documented by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a> (DRS), a UK-based content studio.</p>
+      <p>For the purposes of data protection, the data controller for this site is Digital Revenue Studio. If you have any questions about how your data is handled, please contact us via <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">digitalrevenuestudio.co.uk</a>.</p>
+      <p>This site is hosted on GitHub Pages (GitHub, Inc., a subsidiary of Microsoft Corporation). GitHub Pages does not use cookies for tracking and does not serve ads.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="what-we-collect">
+    <div class="section-label">02</div>
+    <h2>What We Collect</h2>
+    <div class="prose">
+      <p>We collect the absolute minimum required to operate this site and deliver what we've promised.</p>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Data</th><th>When collected</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email address</td>
+          <td>When you sign up for the free guide or monthly updates</td>
+          <td>To deliver the guide and/or send monthly income report emails</td>
+        </tr>
+        <tr>
+          <td>Basic analytics</td>
+          <td>When you visit any page on this site</td>
+          <td>To understand which content is useful (page views, referral sources). No personal identifiers stored.</td>
+        </tr>
+        <tr>
+          <td>IP address (server logs)</td>
+          <td>Automatically, on every page visit</td>
+          <td>Standard GitHub Pages server logging. Not used by us for tracking.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:20px">
+      <p>We do not collect names, addresses, payment information, or any sensitive personal data. We do not require an account to use this site.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="how-we-use-it">
+    <div class="section-label">03</div>
+    <h2>How We Use Your Data</h2>
+    <div class="prose">
+      <p>Your email address is used only for the following purposes, depending on what you signed up for:</p>
+      <ul>
+        <li>Delivering "The First 90 Days" guide if you requested it</li>
+        <li>Sending the monthly income report email if you subscribed to updates</li>
+        <li>Sending occasional updates about significant new content or experiment milestones — no more than once a month</li>
+      </ul>
+      <p>We do not use your email address to send promotional content on behalf of third parties. We do not share your email address with affiliates, partners, or advertisers. We do not use it for any purpose you did not explicitly consent to when you signed up.</p>
+      <p><strong>We never sell your data.</strong> Ever, to anyone, under any circumstances.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="email-marketing">
+    <div class="section-label">04</div>
+    <h2>Email Marketing — Sender</h2>
+    <div class="prose">
+      <p>Email is sent via <a href="https://www.sender.net" target="_blank" rel="noopener">Sender</a>, a third-party email marketing platform. When you submit your email address on this site, it is stored securely in Sender's systems.</p>
+      <p>Sender processes your data in accordance with their own <a href="https://www.sender.net/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. They are GDPR compliant and do not sell subscriber data.</p>
+      <p>Standard email tracking features — such as open rates and click tracking — may be active on emails we send. This helps us understand whether our content is reaching people. If you prefer not to be tracked in this way, you can disable image loading in your email client, which prevents open tracking.</p>
+      <p><strong>You can unsubscribe from any email at any time</strong> using the unsubscribe link at the bottom of every email we send. On unsubscribing, your email address will be removed from our mailing list promptly.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="cookies">
+    <div class="section-label">05</div>
+    <h2>Cookies</h2>
+    <div class="prose">
+      <p>This site does not use tracking cookies or advertising cookies of any kind.</p>
+      <p>GitHub Pages, which hosts this site, may set technical cookies necessary for the functioning of the service. These are not used by us for analytics or tracking purposes.</p>
+      <p>If we add analytics in future (such as a privacy-first tool like Plausible or Fathom), this policy will be updated before any such tool is activated.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="third-parties">
+    <div class="section-label">06</div>
+    <h2>Third Parties</h2>
+    <div class="prose">
+      <p>This site interacts with the following third-party services. Each has its own privacy policy which governs how they handle data.</p>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GitHub Pages</td>
+          <td>Site hosting</td>
+          <td>IP address in server logs (standard)</td>
+        </tr>
+        <tr>
+          <td>Sender</td>
+          <td>Email delivery</td>
+          <td>Email address of subscribers</td>
+        </tr>
+        <tr>
+          <td>Google Fonts</td>
+          <td>Typography</td>
+          <td>IP address on font load (standard CDN request)</td>
+        </tr>
+        <tr>
+          <td>Affiliate platforms</td>
+          <td>Tracked referral links on Recommended page</td>
+          <td>Click data managed by affiliate networks. We receive commission data only, not personal user data.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:20px">
+      <p>We do not embed social media tracking pixels, advertising pixels, or any retargeting scripts on this site.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="your-rights">
+    <div class="section-label">07</div>
+    <h2>Your Rights</h2>
+    <div class="prose">
+      <p>Under UK GDPR and the Data Protection Act 2018, you have the following rights in relation to your personal data:</p>
+    </div>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <h4>Right to access</h4>
+        <p>You can ask what personal data we hold about you and receive a copy of it.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to erasure</h4>
+        <p>You can ask us to delete your personal data. For email subscribers, unsubscribing handles this automatically.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to rectification</h4>
+        <p>If any data we hold about you is inaccurate, you can ask us to correct it.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to object</h4>
+        <p>You can object to us processing your data. For marketing emails, use the unsubscribe link in any email.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to portability</h4>
+        <p>You can ask for your data in a structured, commonly used format.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to complain</h4>
+        <p>If you're unhappy with how we handle your data, you can complain to the <a href="https://ico.org.uk" target="_blank" rel="noopener">ICO</a> (ico.org.uk).</p>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:24px">
+      <p>To exercise any of these rights, contact us via <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a>. We will respond within 30 days.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="contact">
+    <div class="section-label">08</div>
+    <h2>Changes to This Policy</h2>
+    <div class="prose">
+      <p>If we make material changes to this privacy policy — for example, if we add analytics tools, change email provider, or begin collecting additional data — we will update this page and revise the "last updated" date at the top.</p>
+      <p>We will not reduce your rights under this policy without your explicit consent.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="contact">
+    <div class="section-label">09</div>
+    <h2>Contact</h2>
+    <div class="prose">
+      <p>For any questions about this privacy policy, to exercise your rights, or to request deletion of your data, please contact the content team via <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a>.</p>
+      <p>We aim to respond to all data-related requests within 30 days.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>The Digital Income Experiment</h3>
+      <p>An independent project documenting online income testing. Nothing sold. No agenda. Just honest numbers.</p>
+      <p class="footer-credit">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experiments.html">The Experiments</a></li>
+      <li><a href="recommended.html">Recommended</a></li>
+      <li><a href="income-reports.html">Income Reports</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Resources</h4><ul>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="get-the-guide.html">The First 90 Days</a></li>
+      <li><a href="recommended.html#disclosure">Affiliate Disclosure</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Digital Income Experiment. All rights reserved.</span>
+    <span>Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></span>
+  </div>
+  <div class="footer-disclaimer"><strong>Disclaimer:</strong> This site documents one person's experience testing online income methods. Results are personal and not typical. Nothing here is financial or legal advice.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>
