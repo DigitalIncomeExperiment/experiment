@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Thank You to Digital Revenue Studio | The Digital Income Experiment</title>
+<meta name="description" content="The Digital Income Experiment is supported in its early stage by Digital Revenue Studio — who provide content, site infrastructure, and email management. Here's what that means for you.">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.1}
+  em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
+  a{color:var(--amber);text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-links{display:flex;align-items:center;gap:8px;list-style:none}
+  .nav-links a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);transition:color .2s,background .2s}
+  .nav-links a:hover{color:var(--amber);background:var(--amber-glow)}
+  .nav-links .nav-cta{color:var(--bg);background:var(--amber);font-weight:500;padding:6px 16px}
+  .nav-links .nav-cta:hover{background:#ffc02a;color:var(--bg)}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-muted);border-radius:2px}
+  @media(max-width:900px){nav{padding:0 24px}.nav-links{display:none}.nav-hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;gap:4px}}
+
+  /* HERO */
+  .page-hero{position:relative;padding:130px 80px 72px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:480px;height:480px;background:var(--purple-dim);top:-120px;right:-80px;opacity:.35}
+  .orb-2{width:300px;height:300px;background:#1a0800;bottom:-40px;left:60px;opacity:.4}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.25;pointer-events:none}
+  .hero-inner{max-width:760px;margin:0 auto;position:relative;animation:fadeUp .7s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .page-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber-dim);background:var(--amber-glow);padding:5px 14px;border-radius:100px;margin-bottom:28px}
+  .page-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .page-hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-.03em;line-height:.95;margin-bottom:18px}
+  .page-hero-sub{font-size:15px;color:var(--text-muted);max-width:560px;line-height:1.8}
+  @media(max-width:640px){.page-hero{padding:100px 24px 56px}}
+
+  /* LAYOUT */
+  .content-wrap{max-width:760px;margin:0 auto;padding:72px 80px 100px}
+  @media(max-width:900px){.content-wrap{padding:56px 24px 80px}}
+
+  /* PROSE */
+  .prose p{font-size:.95rem;color:var(--text-muted);line-height:1.9;margin-bottom:20px}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--text);font-weight:500}
+  .prose a{color:var(--amber)}
+  .prose h2{font-family:'Syne',sans-serif;font-size:clamp(20px,2.5vw,26px);font-weight:800;letter-spacing:-.02em;margin:52px 0 18px;color:var(--text)}
+  .prose h2:first-child{margin-top:0}
+
+  /* THANK YOU BOX */
+  .thankyou-box{background:linear-gradient(135deg,var(--surface) 0%,#1a1030 100%);border:1px solid var(--border-lt);border-radius:var(--radius-lg);padding:40px;margin:40px 0;position:relative;overflow:hidden;text-align:center}
+  .thankyou-box::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,var(--amber-glow) 0%,transparent 70%);pointer-events:none}
+  .thankyou-box .ty-icon{font-size:48px;margin-bottom:16px;display:block}
+  .thankyou-box h2{font-family:'Syne',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+  .thankyou-box p{font-size:14px;color:var(--text-muted);line-height:1.8;max-width:520px;margin:0 auto 20px}
+  .thankyou-box a.drs-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--bg);font-family:'Syne',sans-serif;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);transition:all .2s}
+  .thankyou-box a.drs-btn:hover{background:#ffc02a;transform:translateY(-2px);opacity:1}
+
+  /* SUPPORT LIST */
+  .support-list{display:flex;flex-direction:column;gap:0;margin:24px 0}
+  .support-item{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .support-item:last-child{border-bottom:none}
+  .support-icon{width:36px;height:36px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:2px}
+  .support-content h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:5px}
+  .support-content p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.65}
+
+  /* DATA / GDPR BOX */
+  .data-box{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px 32px;margin:32px 0}
+  .data-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .data-box-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber)}
+  .data-box p{font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:12px}
+  .data-box p:last-child{margin-bottom:0}
+  .data-box strong{color:var(--text);font-weight:500}
+  .data-box a{color:var(--amber)}
+
+  /* TRANSITION BOX */
+  .transition-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;margin:32px 0}
+  .transition-box p{font-size:.88rem;color:var(--text-muted);line-height:1.8;margin:0}
+  .transition-box p+p{margin-top:10px}
+  .transition-box strong{color:var(--text);font-weight:500}
+
+  .divider{height:1px;background:var(--border);margin:52px 0}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  footer{background:var(--surface);border-top:1px solid var(--border)}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:48px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  @media(max-width:640px){.footer-inner{padding:32px 24px;flex-direction:column;text-align:center}}
+  .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--text)}
+  .footer-credit{font-size:12px;color:var(--text-dim);margin-top:4px}
+  .footer-credit a{color:var(--amber)}
+  .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+  .footer-links a{font-size:12px;color:var(--text-dim);transition:color .2s}
+  .footer-links a:hover{color:var(--text-muted);opacity:1}
+  .footer-bottom{border-top:1px solid var(--border);padding:16px 80px;max-width:1200px;margin:0 auto;font-size:11px;color:var(--text-dim);opacity:.6}
+  @media(max-width:640px){.footer-bottom{padding:14px 24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo-icon.png" alt="The Digital Income Experiment" style="height:32px;width:auto;display:block;">
+    The Digital Income Experiment
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experiments.html">The Experiments</a></li>
+    <li><a href="recommended.html">Recommended</a></li>
+    <li><a href="income-reports.html">Income Reports</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="get-the-guide.html" class="nav-cta">Get The Guide →</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-inner">
+    <div class="page-label">With thanks</div>
+    <h1>Thank you,<br><em>Digital Revenue Studio.</em></h1>
+    <p class="page-hero-sub">The Experiment is independent. But in its early stage it wouldn't exist in this form without the support of Digital Revenue Studio. This page explains who they are, what they do for the Experiment, and what it means for you as a visitor or subscriber.</p>
+  </div>
+</section>
+
+<div class="content-wrap">
+
+  <!-- THANK YOU FEATURE BOX -->
+  <div class="thankyou-box reveal">
+    <span class="ty-icon">🙏</span>
+    <h2>A genuine thank you</h2>
+    <p>Digital Revenue Studio — DRS — is the UK-based studio that built this site, writes the content, and manages the infrastructure that keeps the Experiment running. The Experiment is independent and privately owned, but while it finds its feet, DRS is the team behind it. We're grateful for that.</p>
+    <a href="https://www.digitalrevenuestudio.co.uk" target="_blank" rel="noopener" class="drs-btn">Visit Digital Revenue Studio →</a>
+  </div>
+
+  <!-- WHAT DRS DOES -->
+  <div class="prose reveal">
+    <h2>What DRS does for the Experiment</h2>
+  </div>
+
+  <div class="support-list reveal">
+    <div class="support-item">
+      <div class="support-icon">✍️</div>
+      <div class="support-content">
+        <h4>Content &amp; Writing</h4>
+        <p>Every page on this site — the blog posts, the experiment write-ups, the income report copy, the guides, the legal pages — is written and produced by Digital Revenue Studio. DRS acts as the Experiment's Brand Strategist and content team.</p>
+      </div>
+    </div>
+    <div class="support-item">
+      <div class="support-icon">🌐</div>
+      <div class="support-content">
+        <h4>Site Design &amp; Build</h4>
+        <p>The full website was designed and built by DRS — including the dark amber/purple design system, all 20+ pages, the interactive letter templates, the recommended section, and the subscriber guide. Hosted on GitHub Pages while the Experiment is in its early phase.</p>
+      </div>
+    </div>
+    <div class="support-item">
+      <div class="support-icon">📧</div>
+      <div class="support-content">
+        <h4>Email &amp; Subscriber Infrastructure</h4>
+        <p>While the Experiment builds toward its own independent setup, all subscriber email is managed through DRS's Sender account. Welcome emails, monthly income reports, and any subscriber correspondence all go through DRS. Emails come from <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cba2a5ada48bafa2aca2bfaaa7b9aebdaea5beaeb8bfbeafa2a4e5a8a4e5bea0">[email&#160;protected]</a></strong> on behalf of the Experiment.</p>
+      </div>
+    </div>
+    <div class="support-item">
+      <div class="support-icon">🎨</div>
+      <div class="support-content">
+        <h4>Brand Strategy</h4>
+        <p>DRS defined the Experiment's identity — its tone, its visual language, the decision never to sell anything on the site, and the positioning that keeps it clearly independent from DRS in all public content. DRS created the brand. The Experiment owns it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DATA / GDPR SECTION -->
+  <div class="prose reveal">
+    <h2>What this means for your personal data</h2>
+    <p>The Experiment is committed to being transparent — and that includes being clear about how subscriber data is handled right now, while DRS provides the infrastructure.</p>
+  </div>
+
+  <div class="data-box reveal">
+    <div class="data-box-label">Your data — honest explanation</div>
+    <p>When you sign up on this site — for the free guide, the monthly income reports, or any other form — your email address is collected and held by <strong>Digital Revenue Studio</strong> on behalf of The Digital Income Experiment.</p>
+    <p>This is a temporary arrangement. DRS manages the Sender account that processes sign-ups and sends emails because the Experiment does not yet have its own independent email infrastructure. Your data is used only to deliver what you signed up for — the guide and/or monthly reports — and is passed on to the Experiment owner.</p>
+    <p><strong>Your email will never be sold, shared for marketing, or added to any DRS mailing list without your separate consent.</strong> It belongs to the Experiment. DRS holds it in trust until the Experiment is self-sufficient.</p>
+    <p>Any replies to emails from the Experiment will go to <a href="/cdn-cgi/l/email-protection#771e19111837131e101e03161b05120112190212040302131e1859141859021c"><span class="__cf_email__" data-cfemail="bed7d0d8d1fedad7d9d7cadfd2ccdbc8dbd0cbdbcdcacbdad7d190ddd190cbd5">[email&#160;protected]</span></a> — that's DRS's address. All replies are forwarded to the Experiment owner. You're always talking to the Experiment, just via DRS's infrastructure for now.</p>
+    <p>For full details on how your data is handled, see the <a href="privacy.html">Privacy Policy</a>. To unsubscribe at any time, use the link at the bottom of any email.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- THE PLAN -->
+  <div class="prose reveal">
+    <h2>This arrangement is temporary — by design</h2>
+    <p>The Experiment is called an experiment for a reason. Right now it's in its early phase — testing nine income streams from zero, documenting everything honestly, and reinvesting any income it generates into becoming more independent.</p>
+    <p>The goal is straightforward: as the Experiment earns income, it moves to its own infrastructure. Its own hosting. Its own Sender account. Its own email. At that point DRS steps back from operational support and the relationship becomes content-only — the same as any studio that produces work for a client and credits the client's ownership.</p>
+  </div>
+
+  <div class="transition-box reveal">
+    <p><strong>When the Experiment is self-sustaining, the following transitions:</strong></p>
+    <p>Own domain and hosting &bull; Own Sender account under the Experiment's own email &bull; All subscriber data migrated from DRS's account to the Experiment's own &bull; All email correspondence handled directly &bull; DRS role becomes content production only, not infrastructure</p>
+    <p style="margin-top:10px;font-size:.82rem;color:var(--text-dim)">Until then, every email from the Experiment will carry a note explaining this arrangement — so subscribers always know exactly where they stand.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CLOSING -->
+  <div class="prose reveal">
+    <h2>One last thing</h2>
+    <p>The Experiment's independence from DRS isn't just a legal nicety — it's the whole point. The findings, the income figures, the verdicts on what works and what doesn't — those belong to the Experiment's owner, not to DRS. DRS's job is to document it faithfully and build the platform around it. The data speaks for itself.</p>
+    <p>If you have any questions about this arrangement, about your data, or about anything on this site, you can reach us via DRS at <a href="/cdn-cgi/l/email-protection#5b32353d341b3f323c322f3a37293e2d3e352e3e282f2e3f3234753834752e30"><span class="__cf_email__" data-cfemail="f990979f96b99d909e908d98958b9c8f9c978c9c8a8d8c9d9096d79a96d78c92">[email&#160;protected]</span></a> — your message will be passed on to the Experiment owner.</p>
+    <p>Thank you for being here. And thank you, DRS, for making it possible.</p>
+    <p style="margin-top:32px;font-size:.85rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:20px;font-style:italic">— The Digital Income Experiment &nbsp;&bull;&nbsp; <a href="https://www.digitalrevenuestudio.co.uk" target="_blank" rel="noopener">digitalrevenuestudio.co.uk</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Digital Income Experiment</div>
+      <div class="footer-credit">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></div>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="income-reports.html">Income Reports</a>
+      <a href="blog.html">Blog</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Nothing on this site is financial or legal advice. Results are personal and not typical. C

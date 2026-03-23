@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Income Reports — The Digital Income Experiment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -154,7 +155,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <a href="index.html" class="nav-logo"><img src="logo-icon.png" alt="The Digital Income Experiment" style="height:32px;width:auto;display:block;">The Digital Income Experiment</a>
   <ul class="nav-links" id="nav-links">
     <li><a href="about.html">About</a></li>
     <li><a href="experiments.html">The Experiments</a></li>
@@ -348,9 +349,9 @@
       <h2 style="font-family:'Syne',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.02em;margin-bottom:20px">Get the monthly report by email</h2>
       <p style="font-size:14px;color:var(--text-muted);line-height:1.8;margin-bottom:28px">Sign up and the income report lands in your inbox the same day it publishes. Once a month. No extras.</p>
       <div style="display:flex;flex-direction:column;gap:12px;max-width:400px">
-        <input type="email" placeholder="your@email.com" style="background:var(--surface);border:1px solid var(--border-lt);border-radius:var(--radius);padding:14px 18px;font-family:'DM Mono',monospace;font-size:14px;color:var(--text);outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor=''">
-        <button onclick="subReport(this)" style="background:var(--amber);color:var(--bg);border:none;border-radius:var(--radius);padding:14px 24px;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s" onmouseover="this.style.background='#ffc02a'" onmouseout="this.style.background='var(--amber)'">Subscribe to reports →</button>
+        <div style="text-align: left" class="sender-form-field" data-sender-form-id="e0RjXy"></div>
         <p style="font-size:12px;color:var(--text-dim)">Via Sender · Unsubscribe any time</p>
+        <p style="font-size:11px;color:var(--text-dim);line-height:1.7;margin-top:10px;border-top:1px solid var(--border);padding-top:10px;">By signing up you agree that your email address will be collected and held by <a href="drs-case-study-exp.html" style="color:var(--amber);text-decoration:underline;">Digital Revenue Studio</a> (DRS) on behalf of The Digital Income Experiment, and used to deliver your guide and send monthly income report updates. Email is managed via DRS&rsquo;s Sender account — any replies go to <a href="/cdn-cgi/l/email-protection#4920272f26092d202e203d28253b2c3f2c273c2c3a3d3c2d2026672a26673c22" style="color:var(--text-dim);text-decoration:underline;"><span class="__cf_email__" data-cfemail="c3aaada5ac83a7aaa4aab7a2afb1a6b5a6adb6a6b0b7b6a7aaaceda0acedb6a8">[email&#160;protected]</span></a> and will be passed on to the Experiment. Your data will never be sold or shared for marketing. Unsubscribe at any time. <a href="privacy.html" style="color:var(--amber);">Privacy Policy</a>.</p>
       </div>
     </div>
   </div>
@@ -377,6 +378,8 @@
     <div class="footer-col"><h4>Legal</h4><ul>
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="drs-case-study-exp.html">Supported by DRS</a></li>
+      <li><a href="drs-case-study-exp.html">Supported by DRS</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
@@ -386,15 +389,16 @@
   <div class="footer-disclaimer"><strong>Disclaimer:</strong> All income figures are verified and personal. Not typical results. Some links may be affiliate links — always disclosed. Nothing here is financial advice.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
   const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-  function subReport(btn){
-    const inp=btn.previousElementSibling.previousElementSibling;
-    if(!inp.value||!inp.value.includes('@')){inp.style.borderColor='#e05252';inp.focus();return}
-    btn.textContent='✓ Subscribed!';btn.style.background='#00dc64';btn.disabled=true;inp.disabled=true;
-  }
+  /* Subscribe form handled by Sender embed */
 </script>
-</body>
-</html>
+<script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    var a = e.createElement(n)

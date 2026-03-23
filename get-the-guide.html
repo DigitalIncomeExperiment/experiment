@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get The Guide — The Digital Income Experiment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +150,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <a href="index.html" class="nav-logo"><img src="logo-icon.png" alt="The Digital Income Experiment" style="height:32px;width:auto;display:block;">The Digital Income Experiment</a>
   <ul class="nav-links" id="nav-links">
     <li><a href="about.html">About</a></li>
     <li><a href="experiments.html">The Experiments</a></li>
@@ -174,7 +175,10 @@
     <div class="book-side">
       <div class="book-mock">
         <div class="book-free-tag">FREE</div>
-        <div class="book-tag">Digital guide</div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="logo-icon.png" alt="" style="height:44px;width:auto;">
+          <div class="book-tag" style="margin-bottom:0">Digital guide</div>
+        </div>
         <h2 class="book-title">The First<br><span class="gold">90 Days</span></h2>
         <p class="book-subtitle">The Digital Income Experiment · 2025–2026</p>
         <div class="book-divider"></div>
@@ -206,15 +210,16 @@
       <div class="form-card" id="form-card">
         <h3>Get the guide</h3>
         <p>Sent instantly to your inbox. No spam, no follow-up pitch.</p>
-        <input type="email" class="form-input" id="guide-email" placeholder="your@email.com" autocomplete="email">
-        <button class="form-btn" onclick="submitGuide()">Send me The First 90 Days →</button>
+        <div style="text-align: left" class="sender-form-field" data-sender-form-id="e0RjXy"></div>
         <p class="form-note">Sent via Sender · Unsubscribe any time · 0 spam, ever</p>
+        <p style="font-size:11px;color:var(--text-dim);line-height:1.7;margin-top:10px;border-top:1px solid var(--border);padding-top:10px;">By signing up you agree that your email address will be collected and held by <a href="drs-case-study-exp.html" style="color:var(--amber);text-decoration:underline;">Digital Revenue Studio</a> (DRS) on behalf of The Digital Income Experiment, and used to deliver your guide and send monthly income report updates. Email is managed via DRS&rsquo;s Sender account — any replies go to <a href="/cdn-cgi/l/email-protection#97fef9f1f8d7f3fef0fee3f6fbe5f2e1f2f9e2f2e4e3e2f3fef8b9f4f8b9e2fc" style="color:var(--text-dim);text-decoration:underline;"><span class="__cf_email__" data-cfemail="741d1a121b34101d131d001518061102111a0111070001101d1b5a171b5a011f">[email&#160;protected]</span></a> and will be passed on to the Experiment. Your data will never be sold or shared for marketing. Unsubscribe at any time. <a href="privacy.html" style="color:var(--amber);">Privacy Policy</a>.</p>
       </div>
 
       <div class="success-state" id="success-state">
         <div class="success-icon">✓</div>
         <h3>You're in — check your inbox.</h3>
-        <p>The First 90 Days is on its way. While you wait, head to the <a href="experiments.html" style="color:var(--amber)">Experiments page</a> to see everything that's live right now, or check the <a href="income-reports.html" style="color:var(--amber)">latest income report</a>.</p>
+        <p>Your private link to The First 90 Days is on its way to your inbox now. While you wait, head to the <a href="experiments.html" style="color:var(--amber)">Experiments page</a> or check the <a href="income-reports.html" style="color:var(--amber)">latest income report</a>.</p>
+        <p style="font-size:12px;color:var(--text-dim);margin-top:8px">Can't find the email? Check your spam folder. The link will come from our Sender account.</p>
       </div>
 
       <div class="trust-row">
@@ -288,8 +293,7 @@
     <h2 class="reveal">Ready to see the<br><em>real numbers?</em></h2>
     <p class="reveal">Enter your email and get the guide straight away. One email. No pitch. You can unsubscribe before you've even finished reading it.</p>
     <div class="bottom-form reveal">
-      <input type="email" id="bottom-email" class="form-input" placeholder="your@email.com" autocomplete="email">
-      <button class="form-btn" onclick="submitBottom()">Get The First 90 Days →</button>
+      <div style="text-align: left" class="sender-form-field" data-sender-form-id="e0RjXy"></div>
       <p class="form-note">Sent via Sender · Unsubscribe any time</p>
     </div>
   </div>
@@ -315,6 +319,8 @@
     <div class="footer-col"><h4>Legal</h4><ul>
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="drs-case-study-exp.html">Supported by DRS</a></li>
+      <li><a href="drs-case-study-exp.html">Supported by DRS</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
@@ -324,33 +330,25 @@
   <div class="footer-disclaimer"><strong>Disclaimer:</strong> This site documents one person's experience testing online income methods. Results are personal and not typical. Some links may be affiliate links — always disclosed. Nothing here is financial advice.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
   const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-  function submitGuide(){
-    const inp=document.getElementById('guide-email');
-    if(!inp.value||!inp.value.includes('@')){inp.style.borderColor='#e05252';inp.focus();return}
-    document.getElementById('form-card').style.display='none';
-    document.getElementById('success-state').style.display='block';
-    // TODO: wire to Sender API with form ID
-    console.log('Guide signup:',inp.value);
-  }
-
-  function submitBottom(){
-    const inp=document.getElementById('bottom-email');
-    if(!inp.value||!inp.value.includes('@')){inp.style.borderColor='#e05252';inp.focus();return}
-    const btn=inp.nextElementSibling;
-    btn.textContent='✓ Check your inbox!';
-    btn.style.background='#00dc64';
-    btn.disabled=true;inp.disabled=true;
-    // TODO: wire to Sender API with form ID
-    console.log('Bottom guide signup:',inp.value);
-  }
-
-  document.getElementById('guide-email').addEventListener('keydown',e=>{if(e.key==='Enter')submitGuide()});
-  document.getElementById('bottom-email').addEventListener('keydown',e=>{if(e.key==='Enter')submitBottom()});
+  /* Forms handled by Sender embed — show success state on Sender callback */
+  window.senderCallback = function(event) {
+    if (event && event.type === 'success') {
+      const fc = document.getElementById('form-card');
+      const ss = document.getElementById('success-state');
+      if (fc) fc.style.display = 'none';
+      if (ss) ss.style.display = 'block';
+    }
+  };
 </script>
-</body>
-</html>
+<script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    var a = e.createElement(n)
