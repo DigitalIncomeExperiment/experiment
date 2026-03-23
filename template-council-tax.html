@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64}
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--purple-glow:#7b4fd420;--text:#e8e0f0;--text-muted:#a898c4;--text-dim:#6e5d8a;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:16px;line-height:1.8;overflow-x:hidden}
   body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
   h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1}
   em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--amber)}
@@ -354,4 +354,21 @@ Content created by Digital Revenue Studio (digitalrevenuestudio.co.uk)`;
 
     const letter = `${name}\n${address}\n\n${date}\n\nValuation Office Agency\nCouncil Tax Band Review Team\n\n\nDear Sir or Madam,\n\nRE: Formal Challenge to Council Tax Band — ${address}\n\nI am writing to formally challenge the council tax band currently assigned to my property at the above address. My property is currently assigned to ${curBand}. Based on my research into comparable properties in the immediate area, I believe the correct band should be ${propBand}.\n\nTHE BASIS OF MY CHALLENGE\n\nI have reviewed the council tax bands of comparable properties in the immediate vicinity using the government's council tax band lookup tool at gov.uk/council-tax-bands. The following comparable properties — of similar size, type, age and construction — are assigned to ${propBand}:\n\n${comps}\n\nThese properties are comparable to mine in all material respects. The consistent banding of similar properties at ${propBand} suggests that my current assignment of ${curBand} is incorrect.${val1991Line}\n\nI have been assigned to ${curBand} for ${years}. If this challenge is successful and my band is revised to ${propBand}, I will be seeking a full cash refund of the council tax overpaid during this period, in addition to the reduction applied going forward.\n\nWHAT I AM REQUESTING\n\nI formally request that the Valuation Office Agency review the council tax band assigned to my property at ${address}, with a view to reducing it from ${curBand} to ${propBand}.\n\nPlease treat this letter as a formal challenge. I am happy to provide any additional supporting information you require.\n\nYours faithfully,\n\n${name}\n${address}`;
 
-    navigator.clipboar
+    navigator.clipboar.writeText(letter).then(() => {
+      copyBtn.textContent = '✓ Copied to clipboard';
+      copyBtn.style.background = '#00dc64';
+      copyBtn.style.color = '#0d0b12';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy Letter';
+        copyBtn.style.background = '';
+        copyBtn.style.color = '';
+      }, 3000);
+    });
+  }
+
+  document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
