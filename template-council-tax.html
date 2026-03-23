@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Council Tax Challenge Letter Template | The Digital Income Experiment</title>
 <meta name="description" content="Free council tax band challenge letter template. Fill in your details, copy the letter, send to the Valuation Office Agency. No sign-up required.">
@@ -116,7 +117,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>The Digital Income Experiment</a>
+  <a href="index.html" class="nav-logo"><img src="logo-icon.png" alt="The Digital Income Experiment" style="height:32px;width:auto;display:block;">The Digital Income Experiment</a>
   <ul class="nav-links" id="nav-links">
     <li><a href="about.html">About</a></li>
     <li><a href="experiments.html">The Experiments</a></li>
@@ -195,7 +196,7 @@
         <button class="copy-btn" id="copy-btn" onclick="copyLetter()">Copy Letter</button>
       </div>
       <div class="letter-body" id="letter-preview"></div>
-      <div class="letter-footer-note">Send by email to <strong>ctimail@voa.gov.uk</strong> or submit online at <a href="https://www.gov.uk/challenge-council-tax-band" target="_blank" rel="noopener">gov.uk/challenge-council-tax-band</a>. Keep a copy of everything you send.</div>
+      <div class="letter-footer-note">Send by email to <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dab9aeb3b7bbb3b69aacb5bbf4bdb5acf4afb1">[email&#160;protected]</a></strong> or submit online at <a href="https://www.gov.uk/challenge-council-tax-band" target="_blank" rel="noopener">gov.uk/challenge-council-tax-band</a>. Keep a copy of everything you send.</div>
     </div>
   </div>
 
@@ -219,7 +220,7 @@
       <div class="sidebar-head"><h4>Send To</h4></div>
       <div class="sidebar-body">
         <p><strong style="color:var(--text)">Valuation Office Agency</strong><br>
-        Email: ctimail@voa.gov.uk</p>
+        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4d7c0ddd9d5ddd8f4c2dbd59ad3dbc29ac1df">[email&#160;protected]</a></p>
         <p>Or submit online at gov.uk/challenge-council-tax-band</p>
       </div>
     </div>
@@ -254,12 +255,13 @@
       <a href="income-reports.html">Income Reports</a>
       <a href="blog.html">Blog</a>
       <a href="get-the-guide.html">Get The Guide</a>
+      <a href="drs-case-study-exp.html">Supported by DRS</a>
     </nav>
   </div>
   <div class="footer-bottom-bar"><strong>Disclaimer:</strong> This template is provided for general informational use. It is not legal advice. Always seek independent advice if unsure.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.querySelector('.nav-hamburger').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));
 
   function v(id){return document.getElementById(id).value.trim()}
@@ -352,16 +354,4 @@ Content created by Digital Revenue Studio (digitalrevenuestudio.co.uk)`;
 
     const letter = `${name}\n${address}\n\n${date}\n\nValuation Office Agency\nCouncil Tax Band Review Team\n\n\nDear Sir or Madam,\n\nRE: Formal Challenge to Council Tax Band — ${address}\n\nI am writing to formally challenge the council tax band currently assigned to my property at the above address. My property is currently assigned to ${curBand}. Based on my research into comparable properties in the immediate area, I believe the correct band should be ${propBand}.\n\nTHE BASIS OF MY CHALLENGE\n\nI have reviewed the council tax bands of comparable properties in the immediate vicinity using the government's council tax band lookup tool at gov.uk/council-tax-bands. The following comparable properties — of similar size, type, age and construction — are assigned to ${propBand}:\n\n${comps}\n\nThese properties are comparable to mine in all material respects. The consistent banding of similar properties at ${propBand} suggests that my current assignment of ${curBand} is incorrect.${val1991Line}\n\nI have been assigned to ${curBand} for ${years}. If this challenge is successful and my band is revised to ${propBand}, I will be seeking a full cash refund of the council tax overpaid during this period, in addition to the reduction applied going forward.\n\nWHAT I AM REQUESTING\n\nI formally request that the Valuation Office Agency review the council tax band assigned to my property at ${address}, with a view to reducing it from ${curBand} to ${propBand}.\n\nPlease treat this letter as a formal challenge. I am happy to provide any additional supporting information you require.\n\nYours faithfully,\n\n${name}\n${address}`;
 
-    navigator.clipboard.writeText(letter).then(()=>{
-      const btn = document.getElementById('copy-btn');
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('copied');
-      setTimeout(()=>{btn.textContent='Copy Letter';btn.classList.remove('copied')},3000);
-    });
-  }
-
-  // Init with placeholder letter on load
-  updateLetter();
-</script>
-</body>
-</html>
+    navigator.clipboar

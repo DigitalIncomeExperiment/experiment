@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The First 90 Days — The Digital Income Experiment</title>
+<meta name="description" content="The First 90 Days — full breakdown of all nine income experiments, real numbers, honest verdicts. Exclusive to subscribers.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0b12;--surface:#13101e;--surface2:#1c1729;--amber:#f0a500;--amber-dim:#c47e00;--amber-glow:#f0a50022;--purple:#7b4fd4;--purple-lt:#a07de8;--purple-dim:#3d2869;--text:#e8e0f0;--text-muted:#8878a8;--text-dim:#574970;--border:#2a2040;--border-lt:#3d3060;--radius:6px;--radius-lg:12px;--green:#00dc64;--red:#e05252}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:"DM Mono",monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+  h1,h2,h3,h4{font-family:"Syne",sans-serif;line-height:1.1}
+  a{color:var(--amber);text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,11,18,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-family:"Syne",sans-serif;font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-back{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border-radius:var(--radius);border:1px solid var(--border);transition:all .2s}
+  .nav-back:hover{color:var(--amber);border-color:var(--amber-dim);background:var(--amber-glow);opacity:1}
+  @media(max-width:640px){nav{padding:0 20px}.nav-back{display:none}}
+  .sub-banner{background:linear-gradient(90deg,var(--purple-dim),#1a1030);border-bottom:1px solid var(--border-lt);padding:10px 40px;text-align:center;font-size:12px;color:var(--text-muted);letter-spacing:.04em}
+  .sub-banner strong{color:var(--amber)}
+  .guide-hero{position:relative;padding:100px 80px 72px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+  .orb-1{width:600px;height:600px;background:var(--purple-dim);top:-150px;right:-100px;opacity:.4}
+  .orb-2{width:350px;height:350px;background:#2a1000;bottom:-60px;left:0;opacity:.4}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.22;pointer-events:none}
+  .hero-inner{max-width:860px;margin:0 auto;position:relative;animation:fadeUp .8s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .guide-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber-dim);background:var(--amber-glow);padding:5px 14px;border-radius:100px;margin-bottom:28px}
+  .guide-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .guide-hero h1{font-size:clamp(44px,8vw,88px);font-weight:800;letter-spacing:-.03em;line-height:.9;margin-bottom:20px}
+  .guide-hero h1 .gold{color:var(--amber)}
+  .guide-sub{font-size:15px;color:var(--text-muted);max-width:580px;line-height:1.8;margin-bottom:32px}
+  .guide-meta{display:flex;gap:32px;flex-wrap:wrap}
+  .meta-val{font-family:"Syne",sans-serif;font-size:20px;font-weight:800;color:var(--amber);display:block}
+  .meta-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim)}
+  @media(max-width:640px){.guide-hero{padding:88px 20px 52px}}
+  .toc-bar{background:var(--surface);border-bottom:1px solid var(--border);overflow-x:auto}
+  .toc-inner{max-width:860px;margin:0 auto;padding:0 80px;display:flex;white-space:nowrap}
+  @media(max-width:640px){.toc-inner{padding:0 20px}}
+  .toc-link{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);padding:14px 16px;border-bottom:2px solid transparent;transition:all .2s;display:block}
+  .toc-link:hover{color:var(--amber);border-bottom-color:var(--amber);opacity:1}
+  .guide-wrap{max-width:860px;margin:0 auto;padding:72px 80px 100px;display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start}
+  @media(max-width:880px){.guide-wrap{grid-template-columns:1fr;padding:52px 20px 80px}}
+  .article h2{font-family:"Syne",sans-serif;font-size:clamp(20px,2.8vw,28px);font-weight:800;letter-spacing:-.02em;margin:60px 0 18px;border-bottom:1px solid var(--border);padding-bottom:14px;color:var(--text);scroll-margin-top:100px}
+  .article h2:first-child{margin-top:0}
+  .article h3{font-family:"Syne",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--purple-lt);margin:28px 0 10px}
+  .article p{font-size:.93rem;color:var(--text-muted);line-height:1.9;margin-bottom:16px}
+  .article p:last-child{margin-bottom:0}
+  .article strong{color:var(--text);font-weight:500}
+  .pullquote{border-left:3px solid var(--amber);padding:16px 22px;margin:28px 0;background:var(--amber-glow);border-radius:0 var(--radius) var(--radius) 0}
+  .pullquote p{font-family:"Instrument Serif",serif;font-size:1.05rem;font-style:italic;color:var(--text);margin:0;line-height:1.6}
+  .exp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:20px 0}
+  .exp-card-hd{background:var(--surface2);padding:14px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .exp-num{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim)}
+  .exp-title{font-family:"Syne",sans-serif;font-size:15px;font-weight:700}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px}
+  .badge::before{content:"";width:5px;height:5px;border-radius:50%}
+  .badge-earn{background:rgba(0,220,100,.1);color:var(--green);border:1px solid rgba(0,220,100,.2)}
+  .badge-earn::before{background:var(--green);box-shadow:0 0 5px var(--green)}
+  .badge-act{background:var(--amber-glow);color:var(--amber);border:1px solid var(--amber-dim)}
+  .badge-act::before{background:var(--amber)}
+  .badge-pend{background:rgba(87,73,112,.2);color:var(--text-dim);border:1px solid var(--border)}
+  .badge-pend::before{background:var(--text-dim)}
+  .exp-body{padding:18px 22px}
+  .exp-body p{font-size:.87rem;color:var(--text-muted);line-height:1.75;margin-bottom:12px}
+  .exp-body p:last-child{margin-bottom:0}
+  .data-box{background:var(--surface);border:1px solid var(--border-lt);border-radius:var(--radius-lg);padding:22px;margin:22px 0}
+  .data-label{font-family:"Syne",sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+  .drow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem;gap:10px}
+  .drow:last-child{border-bottom:none}
+  .drow-l{color:var(--text-dim);flex-shrink:0}
+  .drow-v{font-weight:600;color:var(--text);text-align:right}
+  .drow-v.a{color:var(--amber)}
+  .drow-v.g{color:var(--green)}
+  .drow-v.p{color:var(--text-dim);font-style:italic}
+  .drow.tot .drow-l,.drow.tot .drow-v{color:var(--amber)}
+  .info-box{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--purple-lt);border-radius:var(--radius-lg);padding:18px 22px;margin:20px 0}
+  .info-box.amb{border-left-color:var(--amber)}
+  .info-box p{font-size:.85rem;color:var(--text-muted);line-height:1.75;margin:0}
+  .info-box p strong{color:var(--amber)}
+  .vbox{border-radius:var(--radius-lg);padding:20px 24px;margin:16px 0}
+  .vbox.g{background:rgba(0,220,100,.05);border:1px solid rgba(0,220,100,.18)}
+  .vbox.a{background:var(--amber-glow);border:1px solid var(--amber-dim)}
+  .vbox.n{background:var(--surface);border:1px solid var(--border)}
+  .vbox.r{background:rgba(224,82,82,.05);border:1px solid rgba(224,82,82,.18)}
+  .vlabel{font-family:"Syne",sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+  .vbox.g .vlabel{color:var(--green)}
+  .vbox.a .vlabel{color:var(--amber)}
+  .vbox.n .vlabel{color:var(--text-muted)}
+  .vbox.r .vlabel{color:var(--red)}
+  .vbox p{font-size:.85rem;color:var(--text-muted);line-height:1.75;margin:0}
+  .divider{height:1px;background:linear-gradient(to right,var(--border),var(--border-lt),var(--border));margin:56px 0}
+  .sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:14px}
+  @media(max-width:880px){.sidebar{display:none}}
+  .sc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+  .sh{background:var(--surface2);padding:11px 16px;border-bottom:1px solid var(--border)}
+  .sh h4{font-family:"Syne",sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+  .sh.amb{background:var(--amber)}
+  .sh.amb h4{color:var(--bg)}
+  .sb{padding:13px 16px}
+  .sb p{font-size:.8rem;color:var(--text-dim);margin-bottom:8px;line-height:1.6}
+  .snav{list-style:none}
+  .snav li{border-bottom:1px solid var(--border)}
+  .snav li:last-child{border-bottom:none}
+  .snav a{display:block;font-size:.75rem;color:var(--text-muted);padding:8px 0;transition:color .2s}
+  .snav a:hover{color:var(--amber);opacity:1}
+  .snav a span{font-size:.68rem;color:var(--text-dim);margin-right:6px}
+  .sbtn{display:block;text-align:center;background:var(--surface2);color:var(--text-muted);font-family:"Syne",sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:9px;border-radius:var(--radius);transition:all .2s;border:1px solid var(--border);margin-top:8px}
+  .sbtn:hover{border-color:var(--amber-dim);color:var(--amber);background:var(--amber-glow);opacity:1}
+  .sbtn.amb{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+  .sbtn.amb:hover{background:#ffc02a}
+  footer{background:var(--surface);border-top:1px solid var(--border)}
+  .fi{max-width:860px;margin:0 auto;padding:40px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  @media(max-width:640px){.fi{padding:28px 20px;flex-direction:column;text-align:center}}
+  .fb{font-family:"Syne",sans-serif;font-weight:800;font-size:14px;color:var(--text)}
+  .fc{font-size:12px;color:var(--text-dim);margin-top:3px}
+  .fc a{color:var(--amber)}
+  .fl{display:flex;gap:18px;flex-wrap:wrap}
+  .fl a{font-size:12px;color:var(--text-dim)}
+  .fl a:hover{color:var(--text-muted);opacity:1}
+  .fd{border-top:1px solid var(--border);padding:14px 80px;max-width:860px;margin:0 auto;font-size:11px;color:var(--text-dim);line-height:1.6;opacity:.6}
+  @media(max-width:640px){.fd{padding:12px 20px}}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo-icon.png" alt="" style="height:32px;width:auto;display:block;">The Digital Income Experiment</a>
+  <a href="index.html" class="nav-back">Back to site</a>
+</nav>
+
+<div class="sub-banner"><strong>Subscriber content</strong> — This page is exclusive to subscribers. Please don't share the URL publicly.</div>
+
+<section class="guide-hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-inner">
+    <div class="guide-badge">Subscriber Guide &middot; Free</div>
+    <h1>The First<br><span class="gold">90 Days</span></h1>
+    <p class="guide-sub">Nine income streams. One honest breakdown. What was set up, what happened, what the numbers actually look like &mdash; and what we&rsquo;d do differently.</p>
+    <div class="guide-meta">
+      <div><span class="meta-val">9</span><span class="meta-label">Experiments covered</span></div>
+      <div><span class="meta-val">&pound;5.60+</span><span class="meta-label">Confirmed earned</span></div>
+      <div><span class="meta-val">&pound;1,500+</span><span class="meta-label">Also recovered</span></div>
+      <div><span class="meta-val">&pound;0</span><span class="meta-label">Sold on this site</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="toc-bar">
+  <div class="toc-inner">
+    <a href="#why" class="toc-link">Why this exists</a>
+    <a href="#setup" class="toc-link">The setup</a>
+    <a href="#experiments" class="toc-link">All 9 experiments</a>
+    <a href="#numbers" class="toc-link">The numbers</a>
+    <a href="#verdicts" class="toc-link">Honest verdicts</a>
+    <a href="#next" class="toc-link">What&rsquo;s next</a>
+  </div>
+</div>
+
+<div class="guide-wrap">
+<article class="article">
+
+<h2 id="why">Why this exists</h2>
+<p>The internet is full of people telling you how to make money online. Courses, YouTube channels, Reddit threads, Twitter threads &mdash; all promising that some method earns them thousands per month. Almost none of it comes with honest numbers, honest timelines, or any acknowledgement of what doesn&rsquo;t work.</p>
+<p>This project started with a simple question: <strong>what actually happens when a normal person tries all of it at once?</strong> Not a full-time content creator. Not someone with an existing audience. Just someone starting from zero, testing nine income methods simultaneously, and documenting everything honestly.</p>
+<div class="pullquote"><p>&ldquo;Before chasing new income, make sure you are not already losing money you do not need to lose.&rdquo;</p></div>
+<p>This guide is the full first-phase breakdown. Every experiment is covered &mdash; setup, what happened, time invested, money earned, and an honest verdict. No padding. No pitch at the end. If something didn&rsquo;t work, it&rsquo;s in here the same as everything that did.</p>
+<div class="info-box amb"><p><strong>A note on numbers:</strong> Every income figure in this guide is verified and real. &ldquo;Pending&rdquo; means the experiment is active but no payout has cleared. &ldquo;TBC&rdquo; means a claim has been submitted and is awaiting outcome. Nothing gets counted until money is confirmed.</p></div>
+
+<div class="divider"></div>
+
+<h2 id="setup">The setup</h2>
+<p>Nine income streams were selected based on a simple filter: accessible to anyone starting from zero &mdash; no specialist skills assumed, no upfront investment beyond time. They had to cover a range of income types: passive, active, and &ldquo;reclaim what&rsquo;s already yours.&rdquo;</p>
+<h3>Passive income methods</h3>
+<p>Set them up, let them run, check the numbers. KDP publishing, digital products, affiliate marketing. These require upfront time but should, in theory, generate income without ongoing effort once established.</p>
+<h3>Active income methods</h3>
+<p>You only earn when you work. Fiverr freelancing, earn-by-playing platforms, surveys. The question here isn&rsquo;t just whether they pay &mdash; it&rsquo;s what the real hourly rate is when you account for all the time involved.</p>
+<h3>Reclaim methods</h3>
+<p>Money that was already yours but sitting in the wrong hands. Council tax band challenges, car finance mis-selling claims. These aren&rsquo;t really income streams &mdash; they&rsquo;re corrections to overpayments. But the principle is the same: a legitimate route to more money in your account.</p>
+<p>All nine started simultaneously in March 2025. The idea was to compare real returns side by side &mdash; in the same economic conditions, with the same time available &mdash; rather than testing one thing at a time over years.</p>
+
+<div class="divider"></div>
+
+<h2 id="experiments">All 9 experiments &mdash; what they are and how they were set up</h2>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 01</div><div class="exp-title">KDP &mdash; Kindle Publishing</div></div><span class="badge badge-earn">Earning &middot; &pound;5.60+</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Amazon&rsquo;s Kindle Direct Publishing lets anyone publish books and earn royalties of up to 70% on ebooks and ~60% on paperbacks after print costs. No upfront fee. No gatekeepers.</p>
+    <p><strong>How it was set up:</strong> A children&rsquo;s book series &mdash; Maverick&rsquo;s Adventures &mdash; was created from scratch. The first book, <em>Where is Maverick?</em>, was written, illustrated, formatted, and listed on Amazon KDP. Significant upfront time investment. Ongoing maintenance: minimal.</p>
+    <p><strong>What happened:</strong> First royalties confirmed &mdash; &pound;5.60. Small but real. It proves the model works. The series is live on Amazon now. More titles in development. The hypothesis is that each additional book compounds the passive income potential over time.</p>
+    <p><strong>See it:</strong> <a href="recommended-maverick.html">Maverick&rsquo;s Adventures on Amazon &rarr;</a></p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 02</div><div class="exp-title">Digital Products</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Creating and selling a digital product someone pays to download. No fulfilment, no physical stock. Once listed it can sell indefinitely with no additional work.</p>
+    <p><strong>How it was set up:</strong> A Content Debt Management (CDM) tool was created and listed on Payhip. Payhip&rsquo;s free plan charges 5% per transaction with no monthly fee. Also being tested on Gumroad as a secondary channel for organic discovery.</p>
+    <p><strong>What happened:</strong> Active. No confirmed sales yet in the reporting period. Tracking: time to first sale, conversion rate, whether platforms drive any organic discovery without paid promotion.</p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 03</div><div class="exp-title">Affiliate Marketing</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Earning commission by recommending products through tracked links. The key question: can this work through honest content without an existing audience?</p>
+    <p><strong>How it was set up:</strong> Affiliate accounts across Amazon Associates, Digistore24, and direct programmes with Payhip, Gumroad, Pure Pet Food, iD Mobile, and PayPal. All links disclosed. No paid promotion used anywhere.</p>
+    <p><strong>What happened:</strong> Active. Six recommendation categories live. Tracking clicks, conversions, and commission per category. Results to be published in income reports as data accumulates.</p>
+    <p><strong>See it:</strong> <a href="recommended.html">The Recommended section &rarr;</a></p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 04</div><div class="exp-title">Earn by Playing Games</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Reward platforms that pay in points &mdash; convertible to cash or gift cards &mdash; for completing game-based offers, installing apps, and reaching milestones in mobile games.</p>
+    <p><strong>How it was set up:</strong> Three platforms joined simultaneously: Freecash, InboxPounds, and EarnLabs. All three run at the same time so results can be compared under the same conditions. Time per session is logged.</p>
+    <p><strong>What happened:</strong> Active. The critical metric is real hourly rate &mdash; not headline rates, but actual cash per hour including time waiting for offers to register. Data accumulating. Full comparison published in income reports.</p>
+    <p><strong>The honest upfront assessment:</strong> Unlikely to be life-changing. The experiment is about finding out exactly what the real number is &mdash; and whether any of the three platforms is meaningfully better than the others.</p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 05</div><div class="exp-title">Cashback</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Cashback platforms earn commission from retailers and pass a portion back to you when you shop through them. Genuinely passive &mdash; you were spending the money anyway.</p>
+    <p><strong>How it was set up:</strong> Quidco and TopCashback joined simultaneously for a live head-to-head comparison &mdash; same purchases, same time period, compared on rates, merchant coverage, and payout speed.</p>
+    <p><strong>What happened:</strong> Active. Both platforms in use. Verdict on which is better will be published once enough comparable data exists. Early impression: rates vary significantly by category and neither is consistently better across the board.</p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 06</div><div class="exp-title">Surveys</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Completing surveys for rewards. Amazon Shopper Panel chosen as a more curated option than most survey farm apps.</p>
+    <p><strong>How it was set up:</strong> Amazon Shopper Panel joined and used regularly. The platform asks about recent purchases and opinions &mdash; shorter and more targeted than most, with fewer disqualifications.</p>
+    <p><strong>What happened:</strong> Active. Rewards accumulating in Amazon credit. Time tracked per session. The honest upfront position: surveys are unlikely to be a meaningful income stream by hourly rate. The experiment finds the real number.</p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 07</div><div class="exp-title">Fiverr Freelancing</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Offering services on Fiverr&rsquo;s marketplace. Fiverr takes 20% of every transaction. The core challenge for new sellers: the algorithm favours sellers with existing reviews, creating a chicken-and-egg problem for anyone starting from zero.</p>
+    <p><strong>How it was set up:</strong> Three gigs created covering content and digital services. Profile built from scratch &mdash; no existing reviews, no prior history.</p>
+    <p><strong>What happened:</strong> Active. Gigs live. No orders confirmed in the reporting period. Tracking impressions, clicks, orders, and actual hourly rate after Fiverr&rsquo;s cut. The experiment documents whether the zero-review cold start is surmountable through gig optimisation alone.</p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 08</div><div class="exp-title">Earn While You Spend</div></div><span class="badge badge-pend">TBC &mdash; claims submitted</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Reclaiming money through legitimate consumer rights routes. Two claims: a council tax band challenge and a car finance DCA complaint.</p>
+    <p><strong>Council tax &mdash; result confirmed:</strong> After checking comparable properties on the street and estimating the 1991 value using the Nationwide House Price Index calculator, a formal challenge was submitted to the Valuation Office Agency. Process took over two years. <strong>Result: Band D reduced to Band C. Full cash refund of &pound;1,500+ received within two weeks of the decision.</strong> Annual saving going forward: approximately &pound;240 per year.</p>
+    <p><strong>Car finance DCA &mdash; pending:</strong> Three finance agreements (Black Horse, MotoNovo, Mann Island) written to directly in July 2024. <strong>All three confirmed negative DCAs in writing.</strong> The FCA redress scheme is expected to be finalised around May 2026. Redress value: TBC &mdash; will be published when confirmed.</p>
+    <p><strong>Free templates for both:</strong> <a href="template-council-tax.html">Council tax challenge letter &rarr;</a> &nbsp;&nbsp; <a href="template-car-finance.html">Car finance DCA complaint letter &rarr;</a></p>
+  </div>
+</div>
+
+<div class="exp-card reveal">
+  <div class="exp-card-hd"><div><div class="exp-num">Experiment 09</div><div class="exp-title">Ko-fi</div></div><span class="badge badge-act">Active</span></div>
+  <div class="exp-body">
+    <p><strong>What it is:</strong> Ko-fi is a tip jar platform that takes 0% on one-off payments. Supporters can voluntarily contribute with no obligation and no paywall.</p>
+    <p><strong>How it was set up:</strong> Ko-fi profile created and linked from the site. No direct requests for tips made in any content. Purely observational: does honest documentation generate any organic reader support without asking?</p>
+    <p><strong>What happened:</strong> Active. Nothing received in the reporting period &mdash; which is the honest answer. Whether this changes as the site grows is what the experiment documents.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<h2 id="numbers">The numbers &mdash; what has actually been earned</h2>
+<p>Here is the full picture as of March 2026. Every figure is verified. Nothing is estimated. Pending means active but no payout cleared. TBC means submitted and awaiting outcome.</p>
+
+<div class="data-box reveal">
+  <div class="data-label">Full income breakdown &mdash; March 2026</div>
+  <div class="drow"><span class="drow-l">01 &middot; KDP &mdash; Maverick&rsquo;s Adventures</span><span class="drow-v a">&pound;5.60</span></div>
+  <div class="drow"><span class="drow-l">02 &middot; Digital Products &mdash; Payhip</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">03 &middot; Affiliate Marketing</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">04 &middot; Earn by Playing Games</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">05 &middot; Cashback</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">06 &middot; Surveys &mdash; Amazon Shopper Panel</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">07 &middot; Fiverr</span><span class="drow-v p">Pending</span></div>
+  <div class="drow"><span class="drow-l">08 &middot; Council Tax Refund</span><span class="drow-v g">&pound;1,500+ &checkmark;</span></div>
+  <div class="drow"><span class="drow-l">08 &middot; Car Finance DCA</span><span class="drow-v a">TBC &mdash; submitted Jul 2024</span></div>
+  <div class="drow"><span class="drow-l">09 &middot; Ko-fi</span><span class="drow-v p">Pending</span></div>
+  <div class="drow tot"><span class="drow-l">Total confirmed (cash received)</span><span class="drow-v g">&pound;1,505.60+</span></div>
+</div>
+
+<p>The council tax refund sits in a different category to the other income streams &mdash; it&rsquo;s recovery of money overpaid, not new income generated. Both figures are real and verified. The &pound;5.60 from KDP is the first true active income. The &pound;1,500+ from the council tax challenge is the largest single figure &mdash; and required the least ongoing effort once submitted.</p>
+<div class="info-box"><p>Monthly income reports are published on the site with the latest verified figures. <a href="income-reports.html">See the income reports &rarr;</a></p></div>
+
+<div class="divider"></div>
+
+<h2 id="verdicts">Honest verdicts &mdash; would we recommend each one?</h2>
+<p>An honest assessment of each experiment after the first phase &mdash; not whether it could theoretically work for someone somewhere, but whether it&rsquo;s worth the time for someone starting from zero.</p>
+
+<div class="vbox g reveal"><div class="vlabel">&#10003; Yes &mdash; recommended</div><p><strong>KDP Publishing (01):</strong> Worth doing if you&rsquo;re willing to invest the upfront time properly. The passive income model is real &mdash; &pound;5.60 arrived without ongoing work after publication. The ceiling depends on catalogue size. One book won&rsquo;t change your life but a growing series might. Start, persist, build.</p></div>
+
+<div class="vbox g reveal"><div class="vlabel">&#10003; Yes &mdash; highly recommended</div><p><strong>Council Tax Challenge (08a):</strong> If you own or rent in England, Scotland or Wales, spend 30 minutes checking your band against your neighbours. The upside is significant. The downside of a wrong challenge could be neighbours&rsquo; bands going up &mdash; so only proceed if the comparable evidence is clear and consistent. If it is: submit immediately. The clock only starts when you do.</p></div>
+
+<div class="vbox a reveal"><div class="vlabel">&rarr; Conditional &mdash; check your situation</div><p><strong>Car Finance DCA (08b):</strong> If you had car finance before January 2021, write to your lender. It takes 20 minutes and costs nothing. The outcome is genuinely unknown until the FCA finalises the scheme. But the downside of checking is zero. Do it yourself &mdash; don&rsquo;t use a claims company.</p></div>
+
+<div class="vbox a reveal"><div class="vlabel">&rarr; Conditional &mdash; patience required</div><p><strong>Digital Products (02):</strong> The model is sound but the cold start problem is real. Without existing traffic, discoverability is limited. Best suited to someone with an audience or a clear plan for driving traffic. Too early to call definitively &mdash; verdict pending more data.</p></div>
+
+<div class="vbox a reveal"><div class="vlabel">&rarr; Conditional &mdash; honest content required</div><p><strong>Affiliate Marketing (03):</strong> Works when recommendations are genuine and content is trusted. Doesn&rsquo;t work as a bolt-on to a site that exists purely to push links. The approach here &mdash; only recommending things actually used &mdash; is the right model. Early days, commission data accumulating.</p></div>
+
+<div class="vbox a reveal"><div class="vlabel">&rarr; Conditional &mdash; track your hourly rate</div><p><strong>Earn by Playing Games (04):</strong> The headline earning rates are misleading. The real metric is actual cash per hour including all waiting time. Early data suggests it&rsquo;s possible to earn something, but the hourly rate is likely to disappoint. Worth knowing the real number &mdash; which is why the Experiment tracks it properly.</p></div>
+
+<div class="vbox n reveal"><div class="vlabel">&middot; Low-effort add-on</div><p><strong>Cashback (05):</strong> Not a primary income stream, but requires almost no ongoing time once set up. Using whichever platform offers the better rate on each purchase is optimal &mdash; both are worth joining. Results of the head-to-head coming in income reports.</p></div>
+
+<div class="vbox n reveal"><div class="vlabel">&middot; Low return &mdash; know the real number</div><p><strong>Surveys (06):</strong> Amazon Shopper Panel is better than most but the hourly rate is still modest. Worth doing if you have idle phone time. Not worth carving out dedicated time for. Realistic expectations required.</p></div>
+
+<div class="vbox a reveal"><div class="vlabel">&rarr; Conditional &mdash; cold start is the real test</div><p><strong>Fiverr (07):</strong> Works for established sellers with reviews. For brand new sellers, visibility is the core challenge. Whether gig optimisation and patience can overcome the algorithm&rsquo;s preference for proven sellers is what this experiment tests. Too early to call honestly.</p></div>
+
+<div class="vbox n reveal"><div class="vlabel">&middot; Interesting data point &mdash; minimal upside</div><p><strong>Ko-fi (09):</strong> Nothing received yet &mdash; which is the honest answer. Whether organic support materialises as the site grows is worth knowing. Costs nothing to maintain. Verdict: keep running, report honestly, don&rsquo;t expect much.</p></div>
+
+<div class="divider"></div>
+
+<h2 id="next">What comes next</h2>
+<p>The Experiment continues. Monthly income reports are published on the site with the latest verified figures for all nine streams. As pending experiments produce results, the picture gets clearer.</p>
+<p>The most interesting open questions right now:</p>
+<p><strong>Will the KDP catalogue grow?</strong> More Maverick&rsquo;s Adventures titles are in development. The hypothesis is that passive income from KDP compounds with catalogue size &mdash; a series of ten books should earn meaningfully more than one.</p>
+<p><strong>What will the car finance DCA redress look like?</strong> Three negative DCAs confirmed. The FCA scheme expected around May 2026. This could be the largest single income event of the entire Experiment &mdash; or smaller than expected. Nobody knows yet.</p>
+<p><strong>Can Fiverr generate orders from a cold start?</strong> Three gigs live, zero reviews, zero orders so far. The experiment documents exactly what it takes &mdash; or doesn&rsquo;t take &mdash; to get the first order on a platform built around social proof.</p>
+<p><strong>What is the real hourly rate for games and surveys?</strong> Data accumulating. The comparison across Freecash, InboxPounds, and EarnLabs will be published as proper verified figures, not estimates.</p>
+
+<div class="info-box amb reveal"><p><strong>Stay updated:</strong> Monthly income reports land in your inbox each month. For deeper coverage of any specific experiment, the blog covers each one in detail. <a href="blog.html">See all blog posts &rarr;</a></p></div>
+
+<p style="margin-top:32px;font-size:.83rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:18px;font-style:italic">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a> for The Digital Income Experiment.</p>
+
+</article>
+
+<aside class="sidebar">
+  <div class="sc"><div class="sh"><h4>In this guide</h4></div><div class="sb" style="padding:6px 16px"><ul class="snav"><li><a href="#why"><span>01</span>Why this exists</a></li><li><a href="#setup"><span>02</span>The setup</a></li><li><a href="#experiments"><span>03</span>All 9 experiments</a></li><li><a href="#numbers"><span>04</span>The numbers</a></li><li><a href="#verdicts"><span>05</span>Honest verdicts</a></li><li><a href="#next"><span>06</span>What's next</a></li></ul></div></div>
+  <div class="sc"><div class="sh"><h4>Confirmed totals</h4></div><div class="sb"><p style="font-family:Syne,sans-serif;font-size:24px;font-weight:800;color:var(--amber);margin-bottom:4px">&pound;1,505.60+</p><p>Total confirmed as of March 2026. Full breakdown in the <a href="income-reports.html">income reports</a>.</p></div></div>
+  <div class="sc"><div class="sh amb"><h4>Free templates</h4></div><div class="sb"><p>Both claim letters from Experiment 08 &mdash; free, no sign-up.</p><a href="template-council-tax.html" class="sbtn amb">Council Tax Template &rarr;</a><a href="template-car-finance.html" class="sbtn">Car Finance Template &rarr;</a></div></div>
+  <div class="sc"><div class="sh"><h4>All experiments</h4></div><div class="sb"><p>Live status and latest data for all nine streams.</p><a href="experiments.html" class="sbtn">See all experiments &rarr;</a></div></div>
+</aside>
+
+</div>
+
+<footer>
+  <div class="fi"><div><div class="fb">The Digital Income Experiment</div><div class="fc">Content created by <a href="https://digitalrevenuestudio.co.uk" target="_blank" rel="noopener">Digital Revenue Studio</a></div></div><div class="fl"><a href="index.html">Home</a><a href="experiments.html">Experiments</a><a href="income-reports.html">Income Reports</a><a href="blog.html">Blog</a><a href="recommended.html">Recommended</a><a href="drs-case-study-exp.html">Supported by DRS</a></div></div>
+  <div class="fd">Subscriber content &mdash; please don't share this URL publicly. Content created by Digital Revenue Studio for The Digital Income Experiment. Nothing here is financial or legal advice. Results are personal and not typical.</div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("visible");obs.unobserve(x.target)}}),{threshold:.08});
+  document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
